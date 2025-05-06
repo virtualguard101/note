@@ -33,3 +33,5 @@ extra:
       link: /en/ 
       lang: en
     
+theme:
+  logo: assets/logo.png
