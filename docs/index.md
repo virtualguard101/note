@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Welcome to virtualguard's Note
 
 ![power](./assets/index-power.jpg)
