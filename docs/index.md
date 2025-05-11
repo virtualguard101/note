@@ -1,5 +1,7 @@
 # Welcome to virtualguard's Note
 
+![power](./assets/index-power.jpg)
+
 **学无止境 有的放矢 权衡利弊 求真务实**
 
 **The only things researchers should abied by are debates and dialectics. Only by questioning everything at all times can one avoid falling into prejudice.**
