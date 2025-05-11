@@ -15,7 +15,7 @@ Get more information in my [Blog Site](https://blog.virtualguard101.xyz/about/)
 
 ## Recent Researching
 
-- [CS106l | Stanford University](https://web.stanford.edu/class/cs106l/)：C++基础特性与应用
+- [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/)：C++基础特性与应用
 
 - [CMake](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)：C/C++工程构建工具
 
