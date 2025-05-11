@@ -1,17 +1,33 @@
-# Welcome to MkDocs
+# Welcome to virtualguard's Note
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+**学无止境 有的放矢 权衡利弊 求真务实**
 
-## Commands
+**The only things researchers should abied by are debates and dialectics. Only by questioning everything at all times can one avoid falling into prejudice.**
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## About Me
 
-## Project layout
+Get more information in my [Blog Site](https://blog.virtualguard101.xyz/about/)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Recent Researching
+
+- [CS106l | Stanford University](https://web.stanford.edu/class/cs106l/)：C++基础特性与应用
+
+- [CMake](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)：C/C++工程构建工具
+
+## Archived Researching
+
+- [CS61A](https://cs61a.org/)：基于Python的面向对象程序设计入门课，强调抽象，内容深入到程序构造与运行原理
+
+- [MIT-Missing-Semester](https://missing-semester-cn.github.io/)：现代计算机工程基础，CS入门必备课程
+
+## Learning Outcomes
+
+- [SpaceCaculator | CS61A](https://github.com/virtualguard101/space-calculator)：基于Python实现的简易立体几何计算器
+
+## About This Site
+
+这是我的学习笔记，用于记录我的CS自学历程。我的联系方式及其他站点参见[我的主页](https://virtualguard101.xyz/)
+
+![Hello](https://butterblock233.github.io/posts/images/Hello.gif)
+
+*GIF source: [Hello Apple by Meritt Thomas](https://dribbble.com/shots/17347386-Hello-Apple)*
