@@ -44,7 +44,7 @@ comments: true
 
     - [CS61A](https://cs61a.org/): An introductory course on Object-Oriented Programming based on Python, emphasizes abstraction and goes deeper into the principles of program construction and operation. 
 
-    - [MIT-Missing-Semester](https://missing-semester-cn.github.io/): Fundamentals of modern computer engineering, essential for beginners in learning of **C**omputer **S**cince.
+    - [MIT-Missing-Semester](https://missing-semester-cn.github.io/): Fundamentals of modern computer engineering, essential for beginners in learning of **C**omputer **S**cience.
 
 ## Learning Outcomes
 
