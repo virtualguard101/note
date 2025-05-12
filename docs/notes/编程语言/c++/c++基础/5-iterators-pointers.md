@@ -131,6 +131,7 @@ std::map<int, int> map{
 for (auto iter=map.beging(); iter != map.end(); ++iter) {
     const auto& [key, value] = *iter;
 }
+```
 
 上面的`for`语句等效于：
 

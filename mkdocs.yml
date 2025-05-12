@@ -74,6 +74,16 @@ plugins:
 #       link: /en/ 
 #       lang: en
 
+extra_css:
+  - assets/webfonts/Cascadia Mono/font.css
+  - assets/webfonts/LXGW WenKai Screen/font.css
+  - assets/stylesheets/theme.css
+  - assets/stylesheets/feature.css
+  - assets/stylesheets/temp-patch.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+
 markdown_extensions:
   - abbr
   - tables
