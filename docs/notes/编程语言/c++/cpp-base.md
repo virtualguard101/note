@@ -1156,7 +1156,7 @@ STL为`vector`提供了以下常用方法：
 
 这次作业要求学生补全实现三个函数，用于实现`CSV`文件的数据处理，考验学生对**文件输入输出流**的掌握程度。作业难度不算大，同时还涉及了一小部分容器部分的知识点（虽然但是容器部分比较常用的也就`std::vector`）
 
-作业个人实现：[CS106L-Assignments](https://github.com/virtualguard101/cs106l-assignments)
+作业个人实现：[CS106L-Assignments](https://github.com/virtualguard101/cs106l-assignments/blob/main/assignment1/main.cpp)
 
 ## 迭代器和指针
 
