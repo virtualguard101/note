@@ -157,3 +157,5 @@ for (auto& elem : map) {
 在灵活性上，指针更胜一筹，它可以指向内存中的任何对象，包括`nullptr`；引用操作则只能指向一个有效对象，且引用变量一经初始化后便无法再改变其引用对象。
 
 当然，安全和灵活二者是守恒的。指针灵活的特性导致其在使用过程中可能会出现**空指针解引用**等危险操作；而引用的对象不可变（`const`）及对象有效性则有效避免了这些可能在开发过程中被忽略的，但可能在程序运行过程中被触发的问题。
+
+[Pointers and Memory | CS106L-TextBook](https://cs106l.github.io/textbook/cpp-fundamentals/pointers-and-memory#relationship-to-references)中也介绍了这部分的内容。
