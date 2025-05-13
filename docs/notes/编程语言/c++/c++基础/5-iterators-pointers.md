@@ -142,8 +142,10 @@ for (auto& elem : map) {
 ```
 本质其实就是`for-each`
 
-学习迭代器时，可简单将其理解为指向容器元素的指针，虽然这并不准确。关于迭代器的底层原理，可参考[Iterators | CS106L-Textbook](https://cs106l.github.io/textbook/containers/iterators)
+学习迭代器时，可简单将其理解为指向容器元素的指针，虽然这并不准确。关于迭代器的底层原理，可参考[Iterators | CS106L-TextBook](https://cs106l.github.io/textbook/containers/iterators)
 
 ## 指针
 
+了解过C语言的话，这部分内容可直接跳过。是的，二者的指针没有本质上的区别。
 
+详细概念、底层原理可参考[Pointers and Memory | CS106L-TextBook](https://cs106l.github.io/textbook/cpp-fundamentals/pointers-and-memory)
