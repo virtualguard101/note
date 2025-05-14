@@ -69,3 +69,5 @@ lastmod: 2025-04-18 09:07:13
 #### 项目集群
 
 - [初学阅读 | 星辰暗涌](https://www.zhihu.com/question/20138166/answer/49707025957?share_code=ib7hm5OZ97r8&utm_psn=1902778157527990437)
+
+- [高质量C++开源项目 | 星辰暗涌](https://www.zhihu.com/question/26833780/answer/54998764795)
