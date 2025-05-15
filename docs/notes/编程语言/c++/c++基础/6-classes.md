@@ -62,13 +62,13 @@
 
 一个类的大致包含以下几个模块：
 
-- **构造器（Constructor）**
+- **构造函数（Constructor）**
 
 - **私有成员变量/函数**
 
 - **公有成员变量/函数**
 
-- **构析函数（Destructor）**
+- **析构函数（Destructor）**
 
 #### 构造器（Constructor）
 
@@ -76,7 +76,8 @@
 
 假设我们想实现一个`Student`类，我们可以这样定义：
 
-```h
+Header File:
+```cpp
 class Student {
 private:
     std::string name;
@@ -90,9 +91,9 @@ public:
     std::getName();
     long int getID();
     int getAge();
-}
+};
 ```
-
+Source File:
 ```cpp
 #include "Student.h"
 #include <string>
@@ -113,7 +114,7 @@ Student::Student(std::string name, long int id, int age) {
 Student::Student(std::string name, long int id, int age) name{name}, id{id}, age{age} {}
 ```
 
-对于构造器，我们还能定义其**默认构造**方式：
+对于构造函数，我们还能定义其**默认构造**方式：
 
 ```cpp
 // defualt constructor
@@ -123,4 +124,86 @@ Student::Student() name{"virtualguard"}, id{100100101}, age{18} {}
 Student::Student(std::string name, long int id, int age) name{name}, id{id}, age{age} {}
 ```
 
-#### 构析函数
+#### 析构函数
+
+在C++中，析构函数用于在对象生命周期结束时执行清理工作，是对象生命周期中的重要部分。
+
+析构函数不需要显示调用，它会在对象离开其作用范围时自动调用。
+
+析构函数的语法如下：
+```cpp
+Student::~Student() {
+    // free/deallocate any data here
+
+    delete [] some_array; // for illastration
+}
+```
+
+## 类继承
+
+下图展示的是`stream`的继承关系。
+
+![](../../../../assets/cpp/iostream_inheritance.png)
+
+*以上图片来源于[CS106L](https://web.stanford.edu/class/cs106l/)的课程幻灯片。*
+
+针对继承在面向对象编程中的作用与使用思想，课程[CS61A | UC Berkeley](https://cs61a.org/)有详尽的讲解，这里直接看示例。
+
+以几何图形的定义与性质为例：
+
+Header File:
+```cpp
+class Shape {
+public:
+    // virtual function
+    virtual double area() const = 0;
+};
+
+class Circle: public Shape {
+public:
+    Circle(double radius): _radius{radius} {};
+    double area() const {
+        return M_PI * _radius * radius;
+    }
+private:
+    // private members are marked by '_'
+    double _radius;
+};
+
+class Rectangle: public Shape {
+public:
+    Rectangle(double width, double height): _height{height}, _width{width} {};
+    double area() const {
+        return _width * _height;
+    }
+private:
+    double _width, _height;
+}
+```
+
+## 杂项
+
+### 类型别名
+
+允许用户为现有类型创建别名。一般有两种方式：
+
+#### `typedef`
+
+```cpp
+// typedef [origin] [aliasing]
+typedef int Integer;
+typedef double Real;
+```
+
+#### `using`
+
+使用`using`关键字进行类型别名定义是C++11引入的一个特性。第一节的学习中我们就有用到它。
+```cpp
+// using [aliasing] [origin]
+using String = std::string;
+using quadratic = std::pair<bool, std::pair<double, double>>;
+```
+
+## 类模板
+
+
