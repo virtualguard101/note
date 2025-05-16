@@ -5,9 +5,11 @@ comments: true
 
 ![power](./assets/index-power.jpg)
 
-**学无止境 有的放矢 权衡利弊 求真务实**
+=== "中文"
+    **学者应当遵循之物， 唯有知论与证辩。只有时刻保持对一切的质疑，才能避免陷入偏见。**
 
-**The only things researchers should abied by are debates and dialectics. Only by questioning everything at all times can one avoid falling into prejudice.**
+=== "English"
+    **The only things researchers should abied by are debates and dialectics. Only by questioning everything at all times can one avoid falling into prejudice.**  
 
 ## About Me
 
@@ -15,7 +17,6 @@ comments: true
     参见[我的博客](https://blog.virtualguard101.xyz/about/)
 
 === "English"
-
     Get more information in my [Blog Site](https://blog.virtualguard101.xyz/about/)
 
 ## Recent Researching
