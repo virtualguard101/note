@@ -70,7 +70,7 @@
 
 - **析构函数（Destructor）**
 
-#### 构造器（Constructor）
+#### 构造函数（Constructor）
 
 **构造器/构造函数**用于在创建类的新对象时初始化该对象的状态。
 
@@ -88,7 +88,7 @@ public:
     // constructor
     Student(std::string name, long int id, int age);
     // memeber methods
-    std::getName();
+    std::string getName();
     long int getID();
     int getAge();
 };
@@ -100,15 +100,44 @@ Source File:
 
 // implement constructor
 Student::Student(std::string name, long int id, int age) {
+    /// keyword 'this' is neccessary in here in order to avoid naming conflict
     this->name = name;
     this->id = id;
+    this->age = age;
+}
+
+// implemented members
+std::string Student::getName() {
+    // return name; /// alternative
+    return this->name;
+}
+
+long int Stdudent::getID() {
+    return this->id;
+}
+
+int Student::getAge() {
+    return this->age;
+}
+
+// implemented setter functions
+void Student::setName(std::string name) {
+    // use 'this' and '=' here!
+    this->name = name;
+}
+
+void Student::setID(long int id) {
+    this->id = id;
+}
+
+void Student::setAge(int age) {
     this->age = age;
 }
 ```
 
 注意在源文件中实现类方法时需要在函数名前添加它的`namespace`（命名空间），通常是类的名称。
 
-自C++11起，构造器支持使用**列表初始化**：
+自C++11起，**构造器**支持使用**列表初始化**：
 
 ```cpp
 Student::Student(std::string name, long int id, int age) name{name}, id{id}, age{age} {}
@@ -124,7 +153,7 @@ Student::Student() name{"virtualguard"}, id{100100101}, age{18} {}
 Student::Student(std::string name, long int id, int age) name{name}, id{id}, age{age} {}
 ```
 
-#### 析构函数
+#### 析构函数（Destructor）
 
 在C++中，析构函数用于在对象生命周期结束时执行清理工作，是对象生命周期中的重要部分。
 
@@ -204,6 +233,17 @@ using String = std::string;
 using quadratic = std::pair<bool, std::pair<double, double>>;
 ```
 
-## 类模板
+## 模板类
 
+- [Class Templates | CS106L-TextBook](https://cs106l.github.io/textbook/templates/class-templates)
 
+模板类是一种基于多种类型进行**参数化定义**的类，具有通用类型组成的成员变量构成。
+
+模板类用于泛化类跨数据类型，使用模板类能够极大地提升代码的复用性。
+
+假设我们想要实现多个自定义容器，但它们在某些功能上具有通用性，我们就可以使用模板类：
+```cpp
+template <typename T>
+
+!!! note
+    在STL中，所有的容器都是**类**。

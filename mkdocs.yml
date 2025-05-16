@@ -2,7 +2,7 @@ site_name: virtualguard's Note
 site_url: https://note.virtualguard101.xyz
 repo_url: https://github.com/virtualguard101/note
 repo_name: virtualguard101/note
-edit_uri: edit/main/docs/
+edit_uri: blob/main/docs/
 
 theme:
   name: material
@@ -62,8 +62,36 @@ theme:
     # - navigation.footer
     - navigation.sections
 
+    - toc.follow
+    # - toc.integrate
+
+    - search.suggest
+    - search.highlight
+    - search.share
+
 plugins:
   - search
+
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+      js_files:
+        - assets/javascripts/mathjax.js
+        # - assets/javascripts/comments.js
+        # - assets/javascripts/links.js
+      css_files:
+        - assets/webfonts/Cascadia Mono/font.css
+        - assets/webfonts/LXGW WenKai Screen/font.css
+        - assets/stylesheets/theme.css
+        - assets/stylesheets/feature.css
+        - assets/stylesheets/temp-patch.css
+
+  # - redirects:
+  #     redirect_maps:
 
 # extra:
 #   alternate:
