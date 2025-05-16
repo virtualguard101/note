@@ -233,7 +233,9 @@ using String = std::string;
 using quadratic = std::pair<bool, std::pair<double, double>>;
 ```
 
-## 模板类
+## 模板
+
+### 模板类
 
 - [Class Templates | CS106L-TextBook](https://cs106l.github.io/textbook/templates/class-templates)
 
@@ -244,6 +246,84 @@ using quadratic = std::pair<bool, std::pair<double, double>>;
 假设我们想要实现多个自定义容器，但它们在某些功能上具有通用性，我们就可以使用模板类：
 ```cpp
 template <typename T>
+class Container {
+public:
+    Container(T val);
+    T getValue();
+
+private:
+    T value;
+};
+```
+
+也可同时传入多个类型名作为模板参数：
+```cpp
+template <typename T, typename U>
+```
 
 !!! note
     在STL中，所有的容器都是**类**。
+
+### 模板函数
+
+模板函数与模板类的声明类似，即使用`template`关键字进行声明：
+```cpp
+// swap template function
+template <typename T>
+void swap(T& a, T& b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+```
+
+针对上面在头文件中定义的模板类的结构，我们可以在源文件中通过模板函数来完成其成员函数的实现：
+```cpp
+template <class T>
+Container<T>::Container(T val) {
+    this->value = val;
+}
+
+template <typename T>
+T Container<T>::getValue() {
+    retutn value;
+}
+```
+
+在绝大多数情况下，模板参数中的`class`和`typename`可以互换。
+
+!!! note
+    需注意若上述模板函数为以下形式，即为在类的命名空间后添加模板类的参数类型，**模板参数将不会传递**：
+    ```cpp
+    template <class T>
+    Container<T>::Container(T val) {
+        this->value = val;
+    }
+
+    template <typename T>
+    T Container<T>::getValue() {
+        retutn value;
+    }
+    ```
+    C++要求我们在命名空间中确定模板参数，因为根据参数的不同，我们的类可能会有不同的表现。
+
+### 注意事项
+
+在创建模板类时，需要在定义模板类结构的`.h`文件中包含对应的`.cpp`实现：
+
+```cpp
+template <typename T>
+class Container {
+public:
+    Container(T val);
+    T getValue();
+
+private:
+    T value;
+};
+
+// must do this!
+#include "Container.cpp"
+```
+
+    
