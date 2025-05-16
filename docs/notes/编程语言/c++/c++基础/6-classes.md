@@ -228,7 +228,7 @@ typedef double Real;
 
 使用`using`关键字进行类型别名定义是C++11引入的一个特性。第一节的学习中我们就有用到它。
 ```cpp
-// using [aliasing] [origin]
+// using [aliasing] = [origin]
 using String = std::string;
 using quadratic = std::pair<bool, std::pair<double, double>>;
 ```
@@ -296,12 +296,12 @@ T Container<T>::getValue() {
     需注意若上述模板函数为以下形式，即为在类的命名空间后添加模板类的参数类型，**模板参数将不会传递**：
     ```cpp
     template <class T>
-    Container<T>::Container(T val) {
+    Container::Container(T val) {
         this->value = val;
     }
 
     template <typename T>
-    T Container<T>::getValue() {
+    T Container::getValue() {
         retutn value;
     }
     ```
@@ -326,4 +326,3 @@ private:
 #include "Container.cpp"
 ```
 
-    
