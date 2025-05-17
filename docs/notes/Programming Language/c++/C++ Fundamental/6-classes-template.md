@@ -1,4 +1,4 @@
-# 类
+# 类与模板
 
 *该笔记基于课程CS106L的学习，用于记录一些cpp的重要特性以及先前不曾了解的cpp特性。*
 
@@ -277,6 +277,31 @@ void swap(T& a, T& b) {
 }
 ```
 
+也可为模板参数设置默认类型：
+```cpp
+template <typename Type=int>
+Type customMin(Type a, Type b) {
+    return a < b ? a : b;
+}
+
+int main() {
+    std::cout << customMin<int>(101, 5) << std::endl;
+    return 0;
+}
+```
+
+多参数：
+```cpp
+template <typename T, typename U>
+auto smartMin(T a, U b) {
+    return a < b ? a : b;
+}
+
+int main() {
+    std::cout << smartMin(101, 5.5) << std::endl;
+    return 0;
+}
+
 针对上面在头文件中定义的模板类的结构，我们可以在源文件中通过模板函数来完成其成员函数的实现：
 ```cpp
 template <class T>
@@ -293,7 +318,7 @@ T Container<T>::getValue() {
 在绝大多数情况下，模板参数中的`class`和`typename`可以互换。
 
 !!! note
-    需注意若上述模板函数为以下形式，即为在类的命名空间后添加模板类的参数类型，**模板参数将不会传递**：
+    需注意若上述模板函数为以下形式，即未在类的命名空间后添加模板类的参数类型，**模板参数将不会传递**：
     ```cpp
     template <class T>
     Container::Container(T val) {
@@ -326,3 +351,228 @@ private:
 #include "Container.cpp"
 ```
 
+### 模板元编程(TMP, Template Metaprogramming)
+
+合理使用模板可以提高效率。
+
+```cpp
+template<unsigned n>
+struct Factorial {
+    enum { value = n * Factorial<n - 1>::value };
+}
+
+template<> // template class "specialization"
+struct Factorial {
+    enum { value = 1 };
+}
+
+int main() {
+    std::cout << Factorial<10> << '\n'; // 3628800
+}
+```
+
+上面是一个阶乘程序，但`Factorial<10>`的结果会在**编译时**直接计算，而不是通常情况下的**运行时**。这能提高程序在运行时的效率，同时也为类似递归的资源密集型操作提供了接口模板。
+
+### `constexpr`
+
+在C++中，也可使用`constexpr`声明表达式在编译时运行。`constexpr`关键字用于指定一个常量表达式。
+
+```cpp
+constexpr double fib(int n) {
+    if (n == 1) { return 1; }
+    return fib(n - 1) * n;
+}
+```
+
+!!! note
+    - 常量表达式必须在声明时立即进行初始化，以便于编译器在编译时直接运行它
+
+    - 传递给常量表达式的参数也应当是常量/常量表达式
+
+变量也可以使用`constexpr`修饰。
+
+## 常量接口
+
+现有一个用户自定义类`Student`：
+```cpp
+class Student {
+public:
+    Student(String name, long int id, int age);
+    void setName(String name);
+    String getName();
+    long int getID();
+    int getAge();
+
+private:
+    using String = std::string;
+    String _name;
+    long int _id;
+    int _age;
+}
+```
+
+同时有如下函数：
+```cpp
+std::string getAgeInfo(const Student& s) {
+    return s.getName() + "is" + std::to_string(s.getAge()) + "years old."
+}
+/// compile error
+```
+
+那么在编译时就会出现错误，原因如下：
+
+- 在`getAgeInfo()`中，我们使用`const`修饰了对象`s`，以声明其不会被修改
+
+- 然而，编译器并不知道`getName()`和`getAge()`是否会修改对象`s`
+
+- 根据类的特性，成员函数能够**访问并修改成员变量**
+
+解决的方法也很简单，在成员函数声明（头文件）和实现（源文件）的地方中分别在各个函数的参数列表后添加`const`修饰即可：
+```cpp
+class Student {
+public:
+    Student(String name, long int id, int age);
+    void setName(String name);
+    String getName() const;
+    long int getID() const;
+    int getAge() const;
+
+private:
+    using String = std::string;
+    String _name;
+    long int _id;
+    int _age;
+};
+```
+
+```cpp
+#include <string>
+#include "Student.h"
+
+std::string Student::getName() const {
+    return this->_name;
+}
+
+long int Student::getID() const {
+    return this->_id;
+}
+
+int Student::getAge() const {
+    return this->_age;
+}
+```
+
+被`const`所修饰的函数就是所谓的**常量接口**，即**不会改变类的对象/示例属性的函数**。
+
+**具有`const`属性的对象只能与常量接口进行交互**。
+
+### 应用实例
+
+现有一个用户自定义类`IntArray`：
+```cpp
+class IntArray {
+public:
+    IntArray(size_t size);
+    ~IntArray();
+    int& at(size_t index);
+    int size();
+
+private:
+    int *_array;
+    size_t _size;
+}
+```
+
+```cpp
+IntArray::IntArray(size_t size) : _size(size), _array(new int[size]) {}
+
+IntArray::~IntArray() {
+    delete [] _array;
+}
+
+int& at(size_t index) {
+    return  _array[index];
+}
+
+// overload const interface
+int& at(size_t index) const {
+    return  _array[index];
+}
+
+int size() {
+    return this->_size;
+}
+```
+
+在`main`函数调用该类：
+```cpp
+#include "IntArray.h"
+#include <iostream>
+
+static void printElement(const IntArray& arr, size_t index) {
+    std::cout << arr.at(index) << std::endl;
+}
+
+int main() {
+    IntArray arr = IntArray(5);
+    int& secondVal = arr.at(1);
+    secondVal = 101;
+    printElement(arr, 1);
+
+    return 0;
+}
+```
+
+### `const_cast`
+
+在`IntArray`中，现有一个成员函数`findItem`，用于查找元素：
+```cpp
+int& findItem(int value) {
+    for (auto& elem : arr) {
+        if (elem == value) { return elem; }
+    }
+
+    throw std::out_of_range("value not found");
+}
+
+// overload const interface
+const int& findItem(int value) const {
+    for (auto& elem : arr) {
+        if (elem == value) { return elem; }
+    }
+
+    throw std::out_of_range("value not found");
+}
+```
+
+对于常量接口的重写版本，我们可以使用`const_cast`将其简化为一行：
+```cpp
+int& findItem(int value) {
+    for (auto& elem : arr) {
+        if (elem == value) { return elem; }
+    }
+
+    throw std::out_of_range("value not found");
+}
+
+// use const_cast
+const int& findItem(int value) const {
+    return const_cast<IntArray&>(*this).findItem(value);
+}
+```
+
+- `const_cast`用于将当前的`const`引用转换为非`const`引用
+
+- `<IntArray&>`表示转换的非`const`引用目标
+
+- `(*this)`表示对指针`this`进行解引用操作，以将其转换为非`const`引用
+
+- `findItem(value)`表示调用成员函数
+
+总结起来，使用`const_cast`通常分为三步：
+
+1. 设置指向一个非常量对象的状态
+
+2. 调用该函数的非常量版本
+
+3. 将函数调用中非常量类型的返回值转换为常量版本
