@@ -65,7 +65,7 @@ comments: true
 
 === "English"
 
-    This is my notebook written in Chinese, use for recording my self learing process of **C**omputer **S**cience. You're welcome to leave a comment. Contact information and other sites(like blog) is available on my [HomePage](https://virtualguard101.xyz/)
+    This is my notebook written in Chinese, use for recording my self learing process of **C**omputer **S**cience. You're welcome to leave a comment. Contact information and other sites(like blog) are available on my [HomePage](https://virtualguard101.xyz/).
 
 ![Hello](https://butterblock233.github.io/posts/images/Hello.gif)
 
