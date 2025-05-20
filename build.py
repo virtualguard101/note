@@ -2,9 +2,13 @@
 
 import os
 
-message = input("Commit message: ")
+try:
+    path, message = input("Commit path: "), input("Commit message: ")
 
-# git operation
-os.system("git add .")
-os.system(f"git commit -m \"{message}\"")
-os.system("git push origin main")
+    # git operation
+    os.system(f"git add {path}")
+    os.system(f"git commit -m \"{message}\"")
+    os.system("git push origin main")
+
+except KeyboardInterrupt as e:
+    print("User Interrupt", e)
