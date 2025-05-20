@@ -38,16 +38,15 @@ date: 2025-04-13 09:05:18
 
 - 网址：[w3school](https://www.w3schools.com/)
 
-#### GeekForGeeks
->基本同上
-
-- 网址：[GeekforGeeks](https://www.geeksforgeeks.org/)
-
 #### tutorials point
 >形式上与[菜鸟教程](https://www.runoob.com/)、[w3school](https://www.w3schools.com/)没有区别，但涵盖的技术种类比前两者都要丰富，甚至还有数学模块。与w3school一样为境外资源。
 
 - 网址：[Tutorial on Technical and Non Technical Subjects](https://www.tutorialspoint.com/index.htm)
 
+#### GeekForGeeks
+>基本同上
+
+- 网址：[GeekforGeeks](https://www.geeksforgeeks.org/)
 
 
 ### 编程入门
