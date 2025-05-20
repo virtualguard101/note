@@ -11,4 +11,4 @@ try:
     os.system("git push origin main")
 
 except KeyboardInterrupt as e:
-    print("User Interrupt", e)
+    print("User Interrupted", e)
