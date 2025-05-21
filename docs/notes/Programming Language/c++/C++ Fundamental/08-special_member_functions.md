@@ -140,6 +140,8 @@ class StringTable {
 
 与拷贝类似的是，移动也是**逐成员**的。
 
+注意移动操作的参数是一个**右值引用**。
+
 ```cpp
 #include <iostream>
 #include <utility> // for std::swap
