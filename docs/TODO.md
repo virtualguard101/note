@@ -8,6 +8,11 @@ subtitle: Schedual For Short Term
 - [ ] CMake
     - 官方教程：[CMake Tutorial](https://cmake.org/cmake/help/v3.22/guide/tutorial/index.html)
 
+- [ ] SCons
+    - 官方文档：[Current Documentation | SCons](https://scons.org/documentation.html)
+
+    - 与**CMake**的选择：[SCons or CMake instead of qmake](https://stackoverflow.com/questions/14197372/scons-or-cmake-instead-of-qmake)
+
 - [ ] vcpkg
     - 官方中文文档 & 教程：[vcpkg 文档](https://learn.microsoft.com/zh-cn/vcpkg/)
 
