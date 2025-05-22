@@ -47,6 +47,8 @@ subtitle: Schedual For Short Term
 - [ ] C++ Qt Development
     - [Getting Started with Qt](https://doc.qt.io/qt-6.8/gettingstarted.html)
 
+    - 中文文档：[Qt 入门](https://doc.qt.io/qt-6.8/zh/gettingstarted.html)
+
 
 ## Projects
 
