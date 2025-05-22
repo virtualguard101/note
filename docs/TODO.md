@@ -40,7 +40,12 @@ subtitle: Schedual For Short Term
     - [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
 
 - [ ] 云计算架构设计
+    - [BlogPage](https://blog.virtualguard101.xyz/2025/05/19/container-tech/)
+
     - [深入高可用系统原理与设计](https://www.thebyte.com.cn/)
+
+- [ ] C++ Qt Development
+    - [Getting Started with Qt](https://doc.qt.io/qt-6.8/gettingstarted.html)
 
 
 ## Projects
