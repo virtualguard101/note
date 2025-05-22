@@ -14,6 +14,9 @@ subtitle: Schedual For Short Term
 - [ ] Arch Linux
     - [BlogPage & Documentations Resources](https://blog.virtualguard101.xyz/2025/05/19/arch-linux/)
 
+- [ ] Git Advanced
+    - [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
+
 - [ ] 云计算架构设计
     - [深入高可用系统原理与设计](https://www.thebyte.com.cn/)
 
