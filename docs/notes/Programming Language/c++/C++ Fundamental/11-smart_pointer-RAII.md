@@ -193,3 +193,5 @@ int main() {
     - 同时还应保持一致性：
 
         - 如果使用了 `make_unique`，那么一定要同时使用 `make_share`
+
+- 参考阅读：[Smart Pointers in C++ | GeeksForGeeks](https://www.geeksforgeeks.org/smart-pointers-cpp/)
