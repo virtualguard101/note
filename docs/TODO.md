@@ -1,3 +1,8 @@
+---
+icon: material/information-outline
+subtitle: Schedual For Short Term
+---
+
 # TODO
 
 - [ ] CMake
