@@ -1,4 +1,6 @@
 ---
+icon: material/information-outline
+subtitle: Automation Tools Programmer & Undergraduate Student 
 comments: true
 ---
 # Welcome to virtualguard's Note
