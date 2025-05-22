@@ -85,6 +85,7 @@ target_link_libraries(test_${PROJECT_NAME} PRIVATE GL glfw m)
 ```bash
 cd build
 cmake ..
+make
 ```
 
 通过以下命令进行测试/运行主程序：
