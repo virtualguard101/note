@@ -30,6 +30,9 @@ subtitle: Schedual For Short Term
 
     - 与**CMake**的选择：[SCons or CMake instead of qmake](https://stackoverflow.com/questions/14197372/scons-or-cmake-instead-of-qmake)
 
+- [ ] xmake
+    - [xmake quickstart](https://xmake.io/#/zh-cn/guide/quickstart)
+
 - [*] vcpkg
     - 官方中文文档 & 教程：[vcpkg 文档](https://learn.microsoft.com/zh-cn/vcpkg/)
 
