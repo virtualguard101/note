@@ -31,6 +31,12 @@ find_package([your_lib] CONFIG REQUIRED)
 ```
 表示使用第三方库的 CMake 配置文件查找该库。`REQUIRED`关键字确保在找不到包时生成错误。
 
+如果只是使用一个库的某些组件，也可这样配置（以`Qt6`为例）：
+```bash
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)  # 根据需要选择组件
+```
+`COMPONENTS`参数用于指定需要的Qt模块。
+
 注意`target_link_libraries`列表中也需添加引入的第三方库名。
 
 - 创建 CMake 配置
@@ -41,3 +47,24 @@ find_package([your_lib] CONFIG REQUIRED)
     `CMakeUserPresets.json` 文件会将 `VCPKG_ROOT` 环境变量设置为指向包含 `vcpkg` 本地安装的绝对路径，因此注意配置完成后将`CMakeUserPresets.json`移入`.gitignore`，以避免信息泄漏等问题。
 
 配置完成后即可进行生成与构建运行。
+
+## 可能遇到的问题
+
+### 缺少依赖项
+
+如果在运行`cmake --preset=default`的过程中出现错误，且在项目的`build/vcpkg-manifest-install.log`日志中出现类似下面的信息：
+```bash
+qtbase currently requires packages from the system package manager.  They
+  can be installed on Ubuntu systems via sudo apt-get install '^libxcb.*-dev'
+  libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev
+  libxkbcommon-x11-dev libegl1-mesa-dev.
+Call Stack (most recent call first):
+  scripts/ports.cmake:206 (include)
+```
+
+说明缺少依赖项，根据提示安装后删除`build`然后重新运行`cmake --preset=default`进行配置生成即可。
+
+出现问题时可通过管道命令查看是否存在依赖缺失的问题：
+```bash
+cat build/vcpkg-manifest-install.log | grep apt-get
+```
