@@ -58,6 +58,11 @@ subtitle: Schedual For Short Term
 - [*] SpaceCalculator: A calculator for solid geometry, C++ version.
     - [space-calculator](https://github.com/virtualguard101/space-calculator)
 
+- [*] 3BodySimulator: The visualization simulation of three-body motion implemented using C++ & Python.
+    - [项目仓库](https://github.com/virtualguard101/3BodySimulator)
+
+    - [BlogPage]()
+
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
     - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
 
