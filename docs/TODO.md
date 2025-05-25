@@ -61,7 +61,7 @@ subtitle: Schedual For Short Term
 - [*] 3BodySimulator: The visualization simulation of three-body motion implemented using C++ & Python.
     - [项目仓库](https://github.com/virtualguard101/3BodySimulator)
 
-    - [BlogPage]()
+    - [BlogPage](https://blog.virtualguard101.xyz/2025/05/23/3BodySimulator/)
 
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
     - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
