@@ -55,9 +55,13 @@ comments: true
 
     - [SpaceCaculator | CS61A](https://github.com/virtualguard101/space-calculator)：基于Python实现的简易立体几何计算器
 
+    - [3BodySimulator | Build a C++ Project](https://github.com/virtualguard101/3BodySimulator)：使用 C++ & Python 实现的三体运动可视化模拟
+
 === "English"
 
     - [SpaceCaculator | CS61A](https://github.com/virtualguard101/space-calculator): A calculator for solid geometry implement by python.
+
+    - [3BodySimulator | Build a C++ Project](https://github.com/virtualguard101/3BodySimulator): The visualization simulation of three-body motion implemented using C++ & Python
 
 ## About This Site
 
