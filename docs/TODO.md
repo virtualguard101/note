@@ -22,10 +22,7 @@ subtitle: Schedual For Short Term
 
 ## Engineered
 
-- [*] CMake
-    - 官方教程：[CMake Tutorial](https://cmake.org/cmake/help/v3.22/guide/tutorial/index.html)
-
-- [ ] SCons
+- [*] SCons
     - 官方文档：[Current Documentation | SCons](https://scons.org/documentation.html)
 
     - 与**CMake**的选择：[SCons or CMake instead of qmake](https://stackoverflow.com/questions/14197372/scons-or-cmake-instead-of-qmake)
@@ -33,7 +30,7 @@ subtitle: Schedual For Short Term
 - [ ] xmake
     - [xmake quickstart](https://xmake.io/#/zh-cn/guide/quickstart)
 
-- [ ] Git Advanced
+- [*] Git Advanced
     - [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
 
 - [ ] 云计算架构设计
