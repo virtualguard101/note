@@ -9,3 +9,5 @@
 - 官方文档：[Current Documentation | SCons](https://scons.org/documentation.html)
 
 - 与**CMake**的选择：[SCons or CMake instead of qmake](https://stackoverflow.com/questions/14197372/scons-or-cmake-instead-of-qmake)
+
+但由于其构建配置基于Python，等于在构建过程中在项目源码与编译器间加入了一个Python解释器的兼容层，这对性能的依赖无疑是大于CMake/xmake等一众构建工具的。

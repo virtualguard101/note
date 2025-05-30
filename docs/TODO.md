@@ -22,12 +22,7 @@ subtitle: Schedual For Short Term
 
 ## Engineered
 
-- [*] SCons
-    - 官方文档：[Current Documentation | SCons](https://scons.org/documentation.html)
-
-    - 与**CMake**的选择：[SCons or CMake instead of qmake](https://stackoverflow.com/questions/14197372/scons-or-cmake-instead-of-qmake)
-
-- [ ] xmake
+- [*] xmake
     - [xmake quickstart](https://xmake.io/#/zh-cn/guide/quickstart)
 
 - [*] Git Advanced
