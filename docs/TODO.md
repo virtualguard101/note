@@ -25,19 +25,13 @@ subtitle: Schedual For Short Term
 - [*] CMake
     - 官方教程：[CMake Tutorial](https://cmake.org/cmake/help/v3.22/guide/tutorial/index.html)
 
-- [*] SCons
+- [ ] SCons
     - 官方文档：[Current Documentation | SCons](https://scons.org/documentation.html)
 
     - 与**CMake**的选择：[SCons or CMake instead of qmake](https://stackoverflow.com/questions/14197372/scons-or-cmake-instead-of-qmake)
 
 - [ ] xmake
     - [xmake quickstart](https://xmake.io/#/zh-cn/guide/quickstart)
-
-- [*] vcpkg
-    - 官方中文文档 & 教程：[vcpkg 文档](https://learn.microsoft.com/zh-cn/vcpkg/)
-
-- [*] Arch Linux
-    - [BlogPage & Documentations Resources](https://blog.virtualguard101.xyz/2025/05/19/arch-linux/)
 
 - [ ] Git Advanced
     - [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
@@ -54,14 +48,6 @@ subtitle: Schedual For Short Term
 
 
 ## Projects
-
-- [*] SpaceCalculator: A calculator for solid geometry, C++ version.
-    - [space-calculator](https://github.com/virtualguard101/space-calculator)
-
-- [*] 3BodySimulator: The visualization simulation of three-body motion implemented using C++ & Python.
-    - [项目仓库](https://github.com/virtualguard101/3BodySimulator)
-
-    - [BlogPage](https://blog.virtualguard101.xyz/2025/05/23/3BodySimulator/)
 
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
     - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
