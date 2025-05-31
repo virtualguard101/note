@@ -7,6 +7,9 @@ subtitle: Schedual For Short Term
 
 ## Academic
 
+- [*] **C**omputer **S**cience Fundamental Learning Schedual
+    - [一个仅供参考的 CS 学习规划](https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/)
+
 - [*] CS106B/X: Programming Abstractions in C++
     - [Stanford CS106B/X: Programming Abstractions in C++ | csdiy](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106B_CS106X/)
 
@@ -15,12 +18,24 @@ subtitle: Schedual For Short Term
     - [CS106X: Programming Abstractions in C++ | Autumn 2019](https://web.stanford.edu/class/cs106x/)
 
     - [Resources Repository](https://github.com/virtualguard101/CS106B)
-    
 
 - [ ] CS61B: Data Structures and Algorithms
     - [CS 61B Spring 2025](https://sp25.datastructur.es/)
 
     - [CS61B Textbook](https://cs61b-2.gitbook.io/cs61b-textbook)
+
+- [ ] MIT 6.031: Software Construction
+    - [6.102: Software Construction | MIT](https://web.mit.edu/6.102/www/sp25/)
+
+    - [Course Info | csdiy](https://csdiy.wiki/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/6031/)
+
+- [ ] Coursera: Nand2Tetris
+    - [Nand2Tetris I | Coursera](https://www.coursera.org/learn/build-a-computer)
+
+    - [Nand2Tetris II | Coursera](https://www.coursera.org/learn/nand2tetris2)
+
+- [ ] CS61C: Great Ideas in Computer Architecture
+    - [Course Info | csdiy](https://csdiy.wiki/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/CS61C/)
 
 - [ ] CMU CS15213: CSAPP-Computer Systems: A Programmer's Perspective
     - [CMU CS15213: CSAPP | csdiy](https://csdiy.wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/CSAPP/)

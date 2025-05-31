@@ -97,7 +97,18 @@ date: 2025-04-13 09:05:18
 
 - 课程官方网址：[CS106L: Standard C++ Programming | Stanford University](https://web.stanford.edu/class/cs106l/)
 
-- pass
+- ~~pass~~
+
+### 数据结构与算法
+
+#### CS106B/X: Programming Abstractions in C++
+>**课程简述**：CS106系列的另一部分课程，专注于算法与抽象。B与X的教材均为[Programming Abstractions in C++](https://web.stanford.edu/dept/cs_edu/resources/textbook/)，其中CS106X的[课程网站](https://web.stanford.edu/class/cs106x/)整理有[课程讲义](https://web.stanford.edu/class/cs106x/handouts.html)。不过这个课程的资源较为分散，对于学习的话更适合用于入门参考。如果想要系统地学习数据结构与算符的内容的话，建议去看[CS61B](https://csdiy.wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/CS61B/)或[Algorithms I & II](https://csdiy.wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Algo/)
+
+- CS106X课程讲义：[Handouts | CS106X: Programming Abstractions in C++](https://web.stanford.edu/class/cs106x/handouts.html)
+
+- CS106B课程主页：[CS106B: Programming Abstractions](https://web.stanford.edu/class/cs106b/)
+
+- csdiy课程信息页：[Stanford CS106B/X: Programming Abstractions in C++ | csdiy](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106B_CS106X/)
 
 ## 进阶理论
 
