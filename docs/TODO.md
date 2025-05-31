@@ -7,8 +7,15 @@ subtitle: Schedual For Short Term
 
 ## Academic
 
-- [*] CS106B: Programming Abstractions in C++
+- [*] CS106B/X: Programming Abstractions in C++
     - [Stanford CS106B/X: Programming Abstractions in C++ | csdiy](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106B_CS106X/)
+
+    - [CS106B: Programming Abstractions | Latest](https://web.stanford.edu/class/cs106b/)
+
+    - [CS106X: Programming Abstractions in C++ | Autumn 2019](https://web.stanford.edu/class/cs106x/)
+
+    - [Resources Repository](https://github.com/virtualguard101/CS106B)
+    
 
 - [ ] CS61B: Data Structures and Algorithms
     - [CS 61B Spring 2025](https://sp25.datastructur.es/)
