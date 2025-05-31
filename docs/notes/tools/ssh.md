@@ -39,6 +39,15 @@ ssh-copy-id username@server_ip
 
 该命令会自动将本地主机所有公钥的内容复制到服务器的`authorized_keys`文件中。如果服务器返回信息显示没有这个工具，也可以通过上面提到的官方控制台手动将对应的公钥内容复制粘贴到服务器上。
 
+如果提示无密钥：
+```bash
+/usr/bin/ssh-copy-id: ERROR: No identities found
+```
+可在命令中显式指定密钥文件：
+```bash
+ssh-copy-id -i ~/.ssh/webserver0.pub username@server_ip
+```
+
 #### 建立ssh连接
 
 建立ssh连接可以直接在本地终端执行，也可以借助第三方工具，如`PuTTY`、`vscode`等。
