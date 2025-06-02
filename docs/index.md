@@ -25,25 +25,25 @@ comments: true
 
 === "中文"
 
-    - [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/)：C++基础特性与应用
-
-    - [CMake](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)：C/C++工程构建工具
+参见[TODO](https://note.virtualguard101.xyz/TODO/)
 
 === "English"
 
-    - [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/): Standard C++ features and syntax.
-
-    - [CMake](https://cmake.org/cmake/help/latest/guide/tutorial/index.html): C/C++ projects construction tools.
+Refer to [TODO](https://note.virtualguard101.xyz/TODO/)
 
 ## Archived Researching
 
 === "中文"
+
+    - [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/)：C++基础特性与应用
 
     - [CS61A](https://cs61a.org/)：基于Python的面向对象程序设计入门课，强调抽象，内容深入到程序构造与运行原理
 
     - [MIT-Missing-Semester](https://missing-semester-cn.github.io/)：现代计算机工程基础，CS入门必备课程
 
 === "English"
+
+    - [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/): Standard C++ features and syntax.
 
     - [CS61A](https://cs61a.org/): An introductory course on Object-Oriented Programming based on Python, emphasizes abstraction and goes deeper into the principles of program construction and operation. 
 

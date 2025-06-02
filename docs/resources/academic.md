@@ -38,6 +38,13 @@ date: 2025-04-13 09:05:18
 
 - 网址：[GeekforGeeks](https://www.geeksforgeeks.org/)
 
+#### Hello 算法
+>动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。
+
+- 教程网址：[Hello 算法](https://www.hello-algo.com/)
+
+- 项目仓库：[hello-algo](https://github.com/krahets/hello-algo)
+
 
 ### 编程入门
 
