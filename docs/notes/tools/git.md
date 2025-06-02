@@ -52,7 +52,7 @@ git push origin [branch]
 ```bash
 git diff [files/paths]
 ```
-没有文件参数则默认比较整个工作区。
+没有路径参数则默认比较整个工作区。
 
 ### 多分支基础版本控制
 
