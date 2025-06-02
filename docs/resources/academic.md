@@ -38,13 +38,6 @@ date: 2025-04-13 09:05:18
 
 - 网址：[GeekforGeeks](https://www.geeksforgeeks.org/)
 
-#### Hello 算法
->动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。
-
-- 教程网址：[Hello 算法](https://www.hello-algo.com/)
-
-- 项目仓库：[hello-algo](https://github.com/krahets/hello-algo)
-
 
 ### 编程入门
 
@@ -98,6 +91,13 @@ date: 2025-04-13 09:05:18
 
 
 ### 数据结构与算法
+
+#### Hello 算法
+>动画图解、一键运行的数据结构与算法教程。支持 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 代码。
+
+- 教程网址：[Hello 算法](https://www.hello-algo.com/)
+
+- 项目仓库：[hello-algo](https://github.com/krahets/hello-algo)
 
 #### CS106B/X: Programming Abstractions in C++
 >**课程简述**：CS106系列的另一部分课程，专注于算法与抽象。B与X的教材均为[Programming Abstractions in C++](https://web.stanford.edu/dept/cs_edu/resources/textbook/)，其中CS106X的[课程网站](https://web.stanford.edu/class/cs106x/)整理有[课程讲义](https://web.stanford.edu/class/cs106x/handouts.html)。不过这个课程的资源较为分散，对于学习的话更适合用于入门阅读参考。如果想要系统地学习数据结构与算符的内容的话，建议去看[CS61B](https://csdiy.wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/CS61B/)或[Algorithms I & II](https://csdiy.wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Algo/)
