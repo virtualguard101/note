@@ -1,20 +1,10 @@
 ---
 title: 理论类资源归档
-keywords: 理论
-math: true
-mermaid: false
-categories:
-  - 资源归档
-tags:
-  - resources
-abbrlink: 40893
 date: 2025-04-13 09:05:18
 ---
 
-*计算机理论类资源汇总归档，收录计算机基础课程资料、基础理论、进阶理论资料以及计算机领域的学术资料*
-
 !!! Note 
-    本页面的食用方式如下：  
+    计算机理论类资源汇总归档，收录计算机基础课程资料、基础理论、进阶理论资料以及计算机领域的学术资料，**用于记录个人的CS基础学习路线**
 
     1.**课程模块**主要由`教材（电子书/网页文档）`、`幻灯片`、`课程主页（网址）`、`csdiy课程信息页`、`课程录播视频`五个要素组成，由于不同课程的差异以及资源碎片化的特性，上述五个要素一般不会同时出现，当然，也有可能你可以在一个汇总性的要素中找到其他的要素。各个要素会按照我个人认为的权重进行排序。例如，在CS61A中，精读课程的部分内容**对我来说**是合理的，那么我便将`课程主页`、`csdiy课程信息页`这类汇总性较强的要素排在前面；而对于CS106L而言，仅仅需要阅读课程教材及幻灯片就能很大程度上掌握课程的主要内容，以及当下我只希望快速通读一下这个课程的主要内容，那么我就将`教材`与`幻灯片`置前。  
 
@@ -85,7 +75,7 @@ date: 2025-04-13 09:05:18
 
 - ~~pass~~
 
-- #### CS106L: Standard C++ Programming
+#### CS106L: Standard C++ Programming
 >**课程简述**：这门课会深入到很多标准 C++ 的特性和语法，让你编写出高质量的 C++ 代码。例如 auto binding, uniform initialization, lambda function, move semantics，RAII 等技巧。这门课并不难，但是信息量很大，需要在之后的开发实践中反复巩固，因此正好适合正在钻研C++工程的我。
 
 - 官方教材：[CS106L-Textbook](https://cs106l.github.io/textbook/)
@@ -99,6 +89,7 @@ date: 2025-04-13 09:05:18
 
 - ~~pass~~
 
+
 ### 数据结构与算法
 
 #### CS106B/X: Programming Abstractions in C++
@@ -109,6 +100,8 @@ date: 2025-04-13 09:05:18
 - CS106B课程主页：[CS106B: Programming Abstractions](https://web.stanford.edu/class/cs106b/)
 
 - csdiy课程信息页：[Stanford CS106B/X: Programming Abstractions in C++ | csdiy](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106B_CS106X/)
+
+
 
 ## 进阶理论
 
