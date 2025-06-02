@@ -25,9 +25,13 @@ git config --global -e
 
 ## 基本使用
 
-- 可参考[Learn Git Branching](https://learngitbranching.js.org/)
+可参考以下两个内容：
 
+- [Learn Git Branching](https://learngitbranching.js.org/)
 >这个教程制作了精美的图形界面，将Git的各种命令通过生动形象的动画展示出来，使人能够更加深入理解不同命令的作用效果。正如进入网页后教程的欢迎辞所言，这是我目前所见过的“最好的Git教程”。
+
+- [版本控制(Git) | Missing-Semester/CN](https://missing-semester-cn.github.io/2020/version-control/)
+>除了介绍基础使用与一些有用的配置方案，这个教程还提及了Git的一些底层设计与思想以及一些拓展阅读资源。
 
 基础使用的部分也可简单参考下图：
 ![](../../assets/tools/git-base.jpg)
@@ -43,6 +47,14 @@ git add [files/paths]
 ```bash
 git commit -m "[commit message]"
 ```
+
+!!! note "提交信息标准化"
+    关于这部分内容，与**代码格式化**与**代码注释**相同，或许有人会认为这是多此一举，但在较大的独立项目乃至团队开发中，良好的提交信息可以在遇到问题时帮助你快速**重建代码**，从而提高开发效率。
+
+    在提交时，直接执行`git commit`命令以进入提交信息正文（提交信息详细描述）的编辑。
+
+    对于标准化的参考，业内早已达成了一些微妙的共识，可参考文章[How to Write a Git Commit Message](https://cbea.ms/git-commit/)
+
 - 推送（远程仓库，如GitHub、GitLab等）
 ```bash
 git push origin [branch]
@@ -176,5 +188,21 @@ git rebase [branch_name]
 
 上文所述，在个人独立项目及普通的版本控制（不一定非是开发环境才可用版本控制系统）基本就已经够用了。接下来，我们学习记录一些进阶的用法。
 
-### gitattribute
+### 自定义Git属性
+
+在项目中，我们可以自定义**Git属性**。这些属性可以控制 Git 在处理文件时的行为，它们通常定义于项目（Git仓库）的根目录下的`.gitattributes`文件中。
+
+>具体用法可参考[官方教程](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E5%B1%9E%E6%80%A7)
+
+!!! note "`.gitattributes`模板"
+    对于`.gitattribute`文件，[这个仓库](https://github.com/gitattributes/gitattributes)收录了大量的**模板**以供参考。
+
+### 引用
+
+在上文中我们有提到，提交记录在Git程序底层可用**哈希值（SHA-1）**标记，但对于人类而言，记住一串40位的16进制字符不太现实，**引用**便由此而生。
+
+在底层，可简单将引用理解为一个**可变的**，指向提交的**指针**。例如，在使用Git时我们我们常见到的`master`/`main`就是一个通常**指向主分支最新提交**的一个引用。
+
+#### HEAD 引用
+
 
