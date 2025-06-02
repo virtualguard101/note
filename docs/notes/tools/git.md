@@ -50,7 +50,7 @@ git push origin [branch]
 
 - 检查更改（工作区与本地仓库的差异）
 ```bash
-git diff [/path/to/file]
+git diff [files/paths]
 ```
 没有文件参数则默认比较整个工作区。
 
