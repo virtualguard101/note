@@ -336,6 +336,9 @@ git reset HEAD
 
     这是一个相当危险⚠️的操作，其效果直接了当：使`HEAD`回到指定的提交节点，**删除这之后的所有内容**。
 
+!!! note
+    由于`reset`操作会直接修改提交历史，在本地执行`reset`操作后，若需推送至远程，需要添加`-f`参数强制推送，否则Git可能会阻止推送并提示*当前分支的最新提交落后于其对应的远程分支*
+
 #### `git revert`
 
 >参考：[Git Reset and Revert Tutorial for Beginners](https://www.datacamp.com/tutorial/git-reset-revert-tutorial)
