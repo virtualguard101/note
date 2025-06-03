@@ -348,4 +348,10 @@ git reset HEAD
 
 关于两个撤销操作的对比，还可参考[这篇文章](https://www.geeksforgeeks.org/git-difference-between-git-revert-checkout-and-reset/)末尾的表格（其中还提及了`checkout`）
 
+包含`checkout`的操作可视化，也可参考下图：
+
+![](../../assets/tools/git_3.jpg)
+
+*图片来源于网络，仅供学习参考*
+
 实际开发中，特别是团队协作开发，除非是在本地有比较低级的更改或错误需要撤销，一般建议使用`git revert`以确保信息可控。
