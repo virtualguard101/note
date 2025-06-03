@@ -21,4 +21,8 @@ document$.subscribe(() => {
   // 每次切换新页面都要清除旧页面 <style> 元素的引用
   MathJax.startup.document?.outputJax.clearCache();
   MathJax.typesetPromise?.();
+  // MathJax.startup.output.clearCache()
+  // MathJax.typesetClear()
+  // MathJax.texReset()
+  // MathJax.typesetPromise()
 });
