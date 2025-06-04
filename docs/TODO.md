@@ -10,8 +10,15 @@ subtitle: Schedual For Short Term
 - </> **C**omputer **S**cience Fundamental Learning Schedual
     - [一个仅供参考的 CS 学习规划](https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/)
 
-- [*] DSA (Data Structure and Algorithms, 数据结构与算法)
+- [ ] 数学
+    - [ ] 高等数学（多元微/积分学）
+        - [Single Variable Calculus | 18.01SC](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/)
 
+        - [Multivariable calculus | Khan Academy](https://www.khanacademy.org/math/multivariable-calculus)
+
+        - [Multivariable Calculus | MIT 18.02SC](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/)
+
+- [*] DSA (Data Structure and Algorithms, 数据结构与算法)
     - [Hello 算法](https://www.hello-algo.com/)
 
     - [*] CS106B/X: Programming Abstractions in C++
