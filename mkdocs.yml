@@ -8,6 +8,7 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
+  # favicon: images/logo.png
 
   font:
     text: "'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
@@ -17,8 +18,8 @@ theme:
     repo: fontawesome/brands/github
     logo: octicons/stack-24
     edit: material/pencil
-    tag:
-      default: fontawesome/solid/hashtag
+    # tag:
+      # default: fontawesome/solid/hashtag
 
   palette:
 
@@ -92,6 +93,12 @@ plugins:
 
   # - redirects:
   #     redirect_maps:
+
+hooks:
+  - scripts/copyright.py
+  - scripts/links.py
+  - scripts/rss.py
+  # - scripts/fancybox.py
 
 # extra:
 #   alternate:
@@ -172,4 +179,3 @@ validation:
     anchors: warn
     unrecognized_links: warn
     
-# logo: assets/logo.png

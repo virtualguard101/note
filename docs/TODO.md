@@ -1,5 +1,5 @@
 ---
-icon: material/information-outline
+icon: material/pin
 subtitle: Schedual For Short Term
 ---
 

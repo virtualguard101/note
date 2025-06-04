@@ -1,0 +1,5 @@
+/.cache/
+/site/
+/env/
+__pycache__/
+uv.lock

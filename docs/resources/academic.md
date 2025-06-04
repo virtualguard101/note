@@ -1,5 +1,6 @@
 ---
-title: 理论类资源归档
+title: Academic
+icon: material/database-edit
 date: 2025-04-13 09:05:18
 ---
 

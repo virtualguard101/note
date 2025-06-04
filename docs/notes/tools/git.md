@@ -34,7 +34,7 @@ git config --global -e
 >除了介绍基础使用与一些有用的配置方案，这个教程还提及了Git的一些底层设计与思想以及一些拓展阅读资源。
 
 基础使用的部分也可简单参考下图：
-![](../../assets/tools/git-base.jpg)
+![](../../assets/images/tools/git-base.jpg)
 
 *图片来源于网络，仅供学习参考*
 ### 单分支基础版本控制
@@ -265,7 +265,7 @@ HEAD^3~3 = HEAD^3^^^
 
 撤销操作有两种方式：`git reset`与`git revert`
 
-![](../../assets/tools/git_2.jpg)
+![](../../assets/images/tools/git_2.jpg)
 
 *图片来源于网络，仅供学习参考*
 
@@ -326,7 +326,7 @@ git reset HEAD
     ├── index        # 暂存区索引文件
     └── refs/        # 分支引用
     ```
-    ![](../../assets/tools/git_4.jpg)
+    ![](../../assets/images/tools/git_4.jpg)
 
     *图片来源于网络，仅供学习参考*
     
@@ -353,7 +353,7 @@ git reset HEAD
 
 包含`checkout`的操作可视化，也可参考下图：
 
-![](../../assets/tools/git_3.jpg)
+![](../../assets/images/tools/git_3.jpg)
 
 *图片来源于网络，仅供学习参考*
 
