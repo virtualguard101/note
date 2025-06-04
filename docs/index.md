@@ -3,6 +3,7 @@ icon: material/information-outline
 subtitle: Automation Tools Programmer & Undergraduate Student 
 comments: true
 ---
+
 # About
 
 ![power](./assets/index-power.jpg)
