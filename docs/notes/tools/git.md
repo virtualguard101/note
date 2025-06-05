@@ -36,7 +36,8 @@ git config --global -e
 基础使用的部分也可简单参考下图：
 ![](../../assets/images/tools/git-base.jpg)
 
-*图片来源于网络，仅供学习参考*
+*图片来源于网络，仅作学习参考*
+
 ### 单分支基础版本控制
 
 - 暂存
@@ -184,18 +185,44 @@ git rebase [branch_name]
 
 无论使用哪种方法，在分支合并的过程中，若出现**冲突**，都需要用户进行手动合并。关于合并的一些操作会在后文提及。
 
-## 进阶使用
+### 文件操作
 
-上文所述，在个人独立项目及普通的版本控制（不一定非是开发环境才可用版本控制系统）基本就已经够用了。接下来，我们学习记录一些进阶的用法。
+#### 自定义Git属性
 
-### 自定义Git属性
-
-在项目中，我们可以自定义**Git属性**。这些属性可以控制 Git 在处理文件时的行为，它们通常定义于项目（Git仓库）的根目录下的`.gitattributes`文件中。
+在项目中，我们还可以自定义**Git属性**。这些属性可以控制 Git 在处理文件时的行为，它们通常定义于项目（Git仓库）的根目录下的`.gitattributes`文件中。
 
 >具体用法可参考[官方教程](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E5%B1%9E%E6%80%A7)
 
 !!! note "`.gitattributes`模板"
     对于`.gitattribute`文件，[这个仓库](https://github.com/gitattributes/gitattributes)收录了大量的**模板**以供参考。
+
+### 忽略文件
+
+在`.gitignore`中定义你认为在版本控制中需要忽略的文件。通常是一些构建缓存/生成文件，或者是包含存放敏感信息的文件。
+
+>[这个仓库](https://github.com/github/gitignore)收录有大量的`.gitignore`模板可供参考
+
+### 移除/移动文件
+
+要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除（确切地说，是从暂存区域移除），然后提交。 可以用 `git rm` 命令完成此项工作：
+```bash
+git rm [file_name]
+```
+!!! note
+    注意其和在工作区直接执行`rm`后再提交至版本控制系统的区别：前者会将删除操作**同时作用于版本控制系统与工作区**，删除操作会被跟踪记录到版本控制系统中；后者反之，删除操作**仅作用于工作区**
+
+除了同时从工作区和版本控制系统移除文件，我们可能还会想在工作区保留某些文件，但希望Git不要再跟踪它们（一个典型的案例就是定义`.gitignore`时忘了将某些文件移入）。
+
+这可以通过在原命令的基础上添加`--cached`参数实现：
+```bash
+git rm --cached [file_name]
+```
+
+类似地，Git也提供了`git mv`命令以**显式跟踪**文件的移动/重命名操作。详情可参考[Pro Git](https://git-scm.com/book/zh/v2/Git-%e5%9f%ba%e7%a1%80-%e8%ae%b0%e5%bd%95%e6%af%8f%e6%ac%a1%e6%9b%b4%e6%96%b0%e5%88%b0%e4%bb%93%e5%ba%93)对此的表述。
+
+## 进阶使用
+
+上文所述，在个人独立项目及普通的版本控制（不一定非是开发环境才可用版本控制系统）基本就已经够用了。接下来，我们学习记录一些进阶的用法。
 
 ### 引用
 
@@ -267,7 +294,7 @@ HEAD^3~3 = HEAD^3^^^
 
 ![](../../assets/images/tools/git_2.jpg)
 
-*图片来源于网络，仅供学习参考*
+*图片来源于网络，仅作学习参考*
 
 前者本质上是对Git引用的一个简单应用（直接把分支引用的指针回退一个版本），后者本质上是创建一个新的提交。
 
@@ -279,7 +306,7 @@ HEAD^3~3 = HEAD^3^^^
 
 ![](https://media.datacamp.com/legacy/image/upload/v1671196209/Diagram_of_Before_and_After_Git_Reset_9af0fcc3e8.png)
 
-*图片来源于网络，仅供学习参考*
+*图片来源于网络，仅作学习参考*
 
 !!! warning
     由于`reset`直接操作分支引用的特性，若在本地版本控制使用了它，推送至远程后是不会有任何相关记录的，因此在使用它前必须慎重考虑是否符合当前的应用场景，特别是涉及到会**清除数据**的操作（如硬回退）！
@@ -328,7 +355,7 @@ git reset HEAD
     ```
     ![](../../assets/images/tools/git_4.jpg)
 
-    *图片来源于网络，仅供学习参考*
+    *图片来源于网络，仅作学习参考*
     
     这也就解释了为什么`git reset`可以独立操作各个区域 
 
@@ -345,7 +372,7 @@ git reset HEAD
 
 ![](https://media.datacamp.com/legacy/image/upload/v1671196209/Diagram_of_Revert_Before_and_After_4b427cf59b.png)
 
-*图片来源于网络，仅供学习参考*
+*图片来源于网络，仅作学习参考*
 
 与`reset`不同，`revert`不会删除任何东西，而是通过**创建一个具有原始提交反向内容的新提交**来反转原始提交引入的更改。这就是一个安全的撤销操作，因为整个过程**没有任何删除操作**，这就意味着在撤销的过程中版本库中有所记录的一切（文件更改、提交历史等）都会完好无损地保存在本地乃至远程服务器上。
 
@@ -355,6 +382,130 @@ git reset HEAD
 
 ![](../../assets/images/tools/git_3.jpg)
 
-*图片来源于网络，仅供学习参考*
+*图片来源于网络，仅作学习参考*
 
 实际开发中，特别是团队协作开发，除非是在本地有比较低级的更改或错误需要撤销，一般建议使用`git revert`以确保信息可控。
+
+## 工程应用
+
+![](../../assets/images/tools/git_branch.jpg)
+
+*图片来源于网络，仅作学习参考*
+
+如上图所示，Git在项目开发中的实践应用主要体现在**分支使用**与**冲突合并**上；同时还有**远程仓库**的维护。
+
+!!! tip
+    需要注意，对于绝大多数商业项目乃至部分大型开源项目而言，**稳定**地运行与在遇到问题时**能够快速地定位问题**是首要保障。这也是为什么在使用版本控制系统时，对于分支的使用如此频繁的原因。
+
+### 分支同步(`Sync fork`)
+
+>参考：[How to sync your fork with the original repository](https://ljvmiranda921.github.io/notebook/2021/11/12/sync-your-fork/)
+
+一般有两种同步方式：
+
+#### GitHub一键 `Sync fork`
+
+GitHub上的一键`Sync fork`，本质上是一个**合并操作**，即**Merge策略**：
+```md
+同步前状态：
+上游: A ── B ── C ── D ── E (main)
+
+Fork: A ── B ── F ── G (main)
+
+一键Sync后：
+A ── B ── F ── G ──────────┐
+      \                    \
+       └── C ── D ── E ──────┴── M
+                              ^
+                         merge commit
+                     "Merge branch 'main'"
+```
+
+这在一些应用场景下会**污染提交记录**。
+!!! note "**污染**的本质"
+    这里指无意义的merge commit让提交历史变得难以阅读和维护(为方便理解，提交哈希使用单个大写字母替代)：
+    ```bash
+    * M (HEAD -> main, origin/main) Merge branch 'main' of upstream
+    |\  
+    | * E upstream: Add security patch
+    | * D upstream: New API endpoint  
+    | * C upstream: Fix critical bug
+    * | G Your commit: Fix validation
+    * | F Your commit: Add dashboard
+    |/  
+    * B Add user authentication
+    * A Initial commit
+    ```
+    这里`M`就是一个无意义的merge commit。在实际的开发环境中，假如需要频繁进行同步操作，这样的merge commit就会严重影响代码审计：
+    ```bash
+    * F1G2H3I Merge branch 'main' of https://github.com/original/original into main
+    |\  
+    | * E4R5T6Y upstream: Update dependencies
+    * | D7U8I9O Your commit: Refactor user service
+    * | C3V4B5N Your commit: Add unit tests
+    |\  
+    * | A8S9D0F Merge branch 'main' of https://github.com/original/original into main
+    |\|  
+    | * Z1X2C3V upstream: Performance improvements
+    | * Y4U5I6O upstream: Fix memory leak
+    * | P7L8K9J Your commit: Implement caching
+    * | M4N5B6V Your commit: Update UI components
+    |\  
+    * | Q9W8E7R Merge branch 'main' of https://github.com/original/original into main
+    |\|  
+    | * T6Y7U8I upstream: Security update
+    | * R3E4W5Q upstream: Add logging
+    * | A1S2D3F Your commit: Database optimization
+    * | G6H7J8K Your commit: Add error handling
+    |/  
+    * L9P0O1I Add user authentication
+    * M3K4J5H Initial commit
+    ```
+
+#### 手动 `rebase`
+
+为解决前者的问题，我们可以使用`rebase`进行同步：
+
+1. 添加上游仓库为远程源（起名为 `fork`）
+```bash
+git remote add fork https://github.com/com/original/original.git
+```
+
+2. 获取远程源的更新
+```bash
+git fetch fork
+```
+
+3. 切换到目标分支
+```bash
+git checkout [branch_name]
+```
+
+4. 将上游更改rebase到当前分支
+```bash
+git rebase fork/main
+```
+
+5. 强制推送到自己的fork
+```bash
+git push origin +[branch_name]
+# Or -f/--force
+git push origin -f [branch_name]
+```
+
+这就不会产生无意义的merge commit，同时由于`rebase`的特性，rebase的目标分支（当前分支）的提交记录就会呈**线性**分布，对比前者更加清晰简洁：
+```bash
+手动 rebase:
+A ── B ── C ── D ── E ── F' ── G' (线性历史)
+                          ^     ^
+                     重写的提交 重写的提交
+
+详细记录(git log --oneline):
+G' (HEAD -> main, origin/main) Your commit: Fix validation
+F' Your commit: Add dashboard
+E upstream: Add security patch
+D upstream: New API endpoint
+C upstream: Fix critical bug
+B Add user authentication
+A Initial commit
+```

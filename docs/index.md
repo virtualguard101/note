@@ -1,6 +1,6 @@
 ---
 icon: material/information-outline
-subtitle: Automation Tools Programmer & Undergraduate Student 
+subtitle: DevOps Programmer & Undergraduate Student 
 comments: true
 ---
 

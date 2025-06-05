@@ -99,6 +99,9 @@ subtitle: Schedual For Short Term
 
 ## Projects
 
+- [ ] DevOps 实践（游戏构建、部署、测试）
+    - [BlogPage](https://blog.virtualguard101.xyz/2025/06/05/devops-practice/)
+
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
     - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
 
