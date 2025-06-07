@@ -65,7 +65,7 @@ subtitle: Schedual For Short Term
 - [*] Shell 脚本
     - [The Shell Scripting Tutorial](https://www.shellscript.sh/)
 
-    - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
+    - [The art of command line](https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#the-art-of-command-line)
 
 - [ ] 云原生
     - [BlogPage](https://blog.virtualguard101.xyz/2025/05/19/container-tech/)
