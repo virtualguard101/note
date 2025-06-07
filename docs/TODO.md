@@ -62,8 +62,8 @@ subtitle: Schedual For Short Term
 
 ## Engineered
 
-- [*] Git Advanced
-    - [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
+- [*] Shell 脚本
+    - [The Shell Scripting Tutorial](https://www.shellscript.sh/)
 
 - [ ] 云计算架构设计
     - [BlogPage](https://blog.virtualguard101.xyz/2025/05/19/container-tech/)
