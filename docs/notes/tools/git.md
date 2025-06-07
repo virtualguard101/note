@@ -215,7 +215,7 @@ git rm [file_name]
 
 这可以通过在原命令的基础上添加`--cached`参数实现：
 ```bash
-git rm --cached [file_name]
+git rm --cached [path/file]
 ```
 
 类似地，Git也提供了`git mv`命令以**显式跟踪**文件的移动/重命名操作。详情可参考[Pro Git](https://git-scm.com/book/zh/v2/Git-%e5%9f%ba%e7%a1%80-%e8%ae%b0%e5%bd%95%e6%af%8f%e6%ac%a1%e6%9b%b4%e6%96%b0%e5%88%b0%e4%bb%93%e5%ba%93)对此的表述。
@@ -436,7 +436,7 @@ A ── B ── F ── G ──────────┐
     * B Add user authentication
     * A Initial commit
     ```
-    这里`M`就是一个无意义的merge commit。在实际的开发环境中，假如需要频繁进行同步操作，这样的merge commit就会严重影响代码审计：
+    这里`M`就是一个无意义的merge commit。在实际的开发环境中，假如需要频繁进行同步操作，这样的merge commit就会严重影响代码审计（即违背前文提到的“首要保障”的第二条）：
     ```bash
     * F1G2H3I Merge branch 'main' of https://github.com/original/original into main
     |\  
@@ -508,4 +508,166 @@ D upstream: New API endpoint
 C upstream: Fix critical bug
 B Add user authentication
 A Initial commit
+```
+
+### 清理提交记录
+
+#### 压缩合并(`Squash Merge`)
+>参考：
+>
+>1. [How can I merge multiple commits onto another branch as a single squashed commit? | stackoverflow](https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-commits-onto-another-branch-as-a-single-squashed-commit)
+>
+>2. [Git merge squash | Graphite](https://graphite.dev/guides/git-merge-squash)
+
+实际开发中，部分提交可能只是用于临时修复一些较小的错误或进行微调，无形之中增加了提交历史的复杂度（违背“首要保障”中的第二条）。
+
+对于这种情况，我们可以使用**压缩合并**来清理冗余的提交记录：
+```bash
+# Change into the target branch
+git checkout main
+
+# Merge the branch with Squash
+git merge --squash [branch_name]    # except branch 'main'
+```
+
+使用`Squash Merge`时，Git不会自动创建合并提交，需要自己手动创建：
+```bash
+git commit -m "[Merge message]"
+```
+#### 交互式`rebase`(`rebase -i`)
+
+>参考：[Beginner’s Guide to Interactive Rebasing](https://hackernoon.com/beginners-guide-to-interactive-rebasing-346a3f9c3a6d)
+
+仔细阅读[压缩合并](#压缩合并Squash-Merge)的[参考1](https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-commits-onto-another-branch-as-a-single-squashed-commit)，可以发现其中还提到了一种将多个commit合并为一个的方法——`git rebase -i`（交互式变基）
+
+交互式变基的操作更为复杂，但自由度极高，**可以直接对提交历史进行重新排列、编辑、删除或进行合并提交操作**，同时，它可以直接在需要清理的目标分支上进行操作（单分支操作），不需要进行跨分支操作。
+
+使用一下命令进行**交互式变基**操作：
+```bash
+git rebase -i [commit-hash]
+
+# Or use reference
+git rebase -i HEAD~{n}
+```
+这会使默认编辑器打开一个文件，内容大致如下：
+```bash
+pick [commit-hash1] [commit-message2]
+pick [commit-hash2] [commit-message2]
+pick [commit-hash3] [commit-message3]
+                   .
+                   .
+                   .
+```
+可根据文件中的提示对各个提交前的参数进行修改，例如将`pick`改为`drop`就是删除对应的提交。
+
+保存并关闭文件后，变基会自动执行。
+
+### 冲突合并
+>参考：
+>
+>1. [Git冲突合并 | Stalo's Wiki](https://note.stalomeow.com/p/git/#%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81)
+>
+>2. [How do I resolve merge conflicts in a Git repository? | stackoverflow](https://stackoverflow.com/questions/161813/how-do-i-resolve-merge-conflicts-in-a-git-repository)
+>
+>3. [Git mergetool generates unwanted .orig files | stackoverflow](https://stackoverflow.com/questions/1251681/git-mergetool-generates-unwanted-orig-files)
+
+冲突合并可以说是团队协同开发中最常见的操作之一了。发生冲突时，一般可遵循`冲突检测` > `配置diff工具` > `解决冲突` > `继续合并`三步操作解决冲突：
+
+1. 检测冲突
+```bash
+git status
+```
+这个命令在冲突发生时会提示冲突出现在哪些文件中
+
+2. 配置合并工具
+命令行可选择`vimdiff`进行合并，配置如下：
+```bash
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git config mergetool.prompt false
+```
+也可选择`vscode`作为合并工具：
+```bash
+git config --global merge.tool vscode
+git config --global diff.tool vscode
+
+# Windows Command Prompt setting
+git config --global mergetool.vscode.cmd 'code --wait --merge $REMOTE $LOCAL $BASE $MERGED'
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+```
+`--global`参数表示全局设置
+
+3. 启动工具解决冲突
+```bash
+git mergetool
+```
+解决冲突后，默认情况下会将发生冲突的原始文档保存到`.orig`文件中，可通过配置关闭这个功能：
+```bash
+git config --global mergetool.keepBackup false
+```
+
+4. 完成合并
+```bash
+git merge --continue
+```
+若要取消合并，则把参数替换为`--abort`：
+```bash
+git merge --abort
+```
+
+### 常用工作流
+
+<div class="responsive-video-container">
+    <iframe src="https://player.bilibili.com/player.html?aid=561005338&bvid=BV19e4y1q7JJ&cid=846391446&p=1&autoplay=0" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"> 
+    </iframe>
+</div>
+
+## 杂项/Git扩展
+
+### LFS
+
+>官网：[Git Large File Storage](https://git-lfs.com/)
+
+Git LFS (Large File Storage) 是 Git 的一个扩展，用于处理大文件的版本控制。它将大文件存储在远程服务器上，而在 Git 仓库中只保存指向这些文件的指针。
+
+- 根据官网提示安装后，使用以下命令初始化：
+```bash
+git lfs install
+```
+
+- 使用以下命令追踪大文件：
+```bash
+git lfs track "[file/*.file_extension]"
+```
+
+- 查看跟踪状态：
+```bash
+git lfs track
+```
+
+- 确保`.gitattributes`被追踪：
+```bash
+git add .gitattributes
+```
+
+- 随后即可正常使用Git进行提交与推送：
+```bash
+git add .
+git commit -m "[commit message]"
+git push origin [branch]
+```
+
+- 通过以下命令获取使用文档：
+```bash
+# Overview
+git lfs help
+
+# Detail
+git lfs help <command>
+git lfs <command> -h
 ```
