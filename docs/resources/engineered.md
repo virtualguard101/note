@@ -5,15 +5,13 @@ date: 2025-04-13 09:07:13
 ---
 
 !!! note
-    计算机工程类资源汇总归档，收录实用项目构建、项目标准化、工程化工具使用等计算机工程化相关资料或文章；同时记录一些实用性网站以及有关求职方面的资源。
+    计算机工程类资源汇总归档，收录实用项目构建、项目标准化、工程化工具使用等计算机工程化相关资料或书籍；同时记录一些实用性网站以及有关求职方面的资源。
 
-## 部分JD
+## 学习参考
 
->在学习过程中，找到自己感兴趣的方向很重要，其决定了你未来深耕的道路。可通过研读各个企业的招聘信息来决定自己未来的学习方向，并将其记录下来，作为自己的学习参照。
+### 云原生 && DevOps
 
-- [miHoYo校园招聘](https://jobs.mihoyo.com/?channelToken=xzad4a23ad-7daa4c92b60e-abb13ba588ce#/campus/position?competencyTypes%5B0%5D=1)
-
-- [miHoYo JD](https://researching.virtualguard101.xyz/miHoYo-JD/)
+- [深入高可用系统原理与设计](https://www.thebyte.com.cn/)
 
 ## 项目案例
 

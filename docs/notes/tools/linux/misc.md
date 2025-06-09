@@ -22,3 +22,10 @@
 - 教程网址：[OverTheWire: Bandit](https://overthewire.org/wargames/bandit/)
 
 - 通关教程：[Linux命令-bandit通关日志 | 掘金-ReisenSS](https://juejin.cn/post/7234467007717982268)
+
+### The art of command line
+>一份非常经典的教程，源于 Quora 的一个提问，在各路大神的贡献努力下已经成为了一个 GitHub 十万 stars 的顶流项目，被翻译成了十几种语言。需要结合实践反复阅读方可消化。
+
+- GitHub仓库(English): [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#the-art-of-command-line)
+
+- 中译版: [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)

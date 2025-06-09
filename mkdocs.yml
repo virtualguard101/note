@@ -104,6 +104,7 @@ extra:
   analytics:
     provider: google
     property: G-3JKT1BJEB6
+    # property: G-Q0XX9SKFVP
 
 extra_css:
   - assets/webfonts/Cascadia Mono/font.css
