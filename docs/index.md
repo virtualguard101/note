@@ -37,7 +37,7 @@ comments: true
 
 ## Archived Researching
 !!! note
-    This part only records the module of Academic.
+    This part only records the courses which can be found at [csdiy](https://csdiy.wiki).
 
 === "English"
 
