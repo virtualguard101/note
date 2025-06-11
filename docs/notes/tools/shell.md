@@ -158,10 +158,205 @@ hello, vg
     还有两种方法：
     ```bash
     # Set the variable at the same line with executed command
-    NAME=virtualguard ./test.sh  # 只对这个命令有效
+    NAME=virtualguard ./test.sh  #  valid only on this command
 
     # Execute in current shell
-    source ./test.sh  # 或者 . ./test.sh
+    source ./test.sh  # or . ./test.sh
     ```
 
-## 通配符
+## 转义字符
+
+在 shell 中，部分字符具有特殊意义，如 `"` 被 shell 解释器用于定义字符串边界，会影响 shell 对文本参数的解释。
+
+但在某些场景我们可能希望不希望这些字符被 shell 解释，而是直接在终端上输出它们；若尝试直接在命令或脚本中拼接它们，例如：
+```bash
+echo "hello, " world! ""
+```
+
+!!! note inline end
+    `world`两端与`"`间是否存在空格是有区别的，前者 shell 认为这段信息有三个参数，而后者则只有一个参数，可通过`ls`命令验证这一点：
+    ```bash
+    ls "hello, " world! ""
+    ls: 无法访问 'hello, ': 没有那个文件或目录
+    ls: 无法访问 'world!': 没有那个文件或目录
+    ls: 无法访问 '': 没有那个文件或目录
+
+    ls "hello "world""
+    ls: 无法访问 'hello world': 没有那个文件或目录
+    ```
+
+解释器则会将上面的文本信息解释为以下三个参数：
+
+1. `"hello, "`
+
+2. `world!`
+
+3. `""`
+
+然后输出：
+```bash
+hello,  world!
+```
+这显然不是预期的结果。
+
+使用`\`对这类符号进行**转义**操作：
+```bash
+echo "hello, \"world\""
+hello, "world
+```
+
+!!! note
+    大部分特殊字符(e.g. `*`, `'`, etc)在`"`的包裹下不会被 shell 解释，而是直接输出：
+    ```bash
+    echo *
+    build.py docs LICENSE mkdocs.yml overrides README.md requirements.txt scripts
+
+    echo "*"
+    *
+    ```
+    常用的，且被`"`包裹仍会被 shell 解释的特殊字符有 `"`、`$`、`\`。想要输出它们就需要使用转义字符
+
+
+## 循环控制语句
+
+### `for`循环
+
+语法如下：
+```sh
+for __var__ in __var_list__
+do
+    # .....
+done
+```
+**e.g.**
+
+!!! note inline end
+    这里的`*`就是**通配符**，表示当前路径下的所有文件和文件夹；如果对其使用转义字符(`\*`)，则会直接输出`*`本身
+    ```bash
+    ./test.sh
+    Looping ... i is set to hello
+    Looping ... i is set to 1
+    Looping ... i is set to *
+    Looping ... i is set to 2
+    Looping ... i is set to goodbye
+    ```
+
+```sh
+#!/bin/sh
+set -ue
+
+for i in 1 * goodbye
+do
+    echo "Looping ... i is $i"
+done
+```
+```bash
+./test.sh
+Looping ... i is set to 1
+Looping ... i is set to test.sh
+Looping ... i is set to goodbye
+```
+
+### `while`循环
+
+语法如下：
+```sh
+while [ __condition__ ]
+do
+    # .....
+done
+```
+
+**e.g.**
+
+- 
+
+!!! tip inline end
+    `:`表示死循环，在 shell 中还有以下方法表示死循环(表达式为“真”):
+
+    - 使用`true`
+    ```sh
+    while true
+    do
+        # .....
+    done
+    ```
+
+    - 使用数值 1(注意[ ])
+    ```sh
+    while [ 1 ]
+    do
+        # .....
+    done
+    ```
+
+    - 使用字符串(注意[ ])
+    ```sh
+    while [ "true" ]
+    do
+        # .....
+    done
+    ```
+
+```sh
+#!/bin/sh
+set -ue
+
+while :
+do
+    echo "You're welcome to leave some message here, type \"^C\" to quit"
+    read INPUT
+    echo "You typed $INPUT"
+done
+```
+```bash
+./test.sh
+You're welcome to leave some message here, type "^C" to quit
+hello
+You typed hello
+You're welcome to leave some message here, type "^C" to quit
+5
+You typed 5
+You're welcome to leave some message here, type "^C" to quit
+bye
+You typed bye
+You're welcome to leave some message here, type "^C" to quit
+^C
+```
+
+- 
+
+```sh
+#!/bin/sh
+set -ue
+
+while read input_text 
+do
+    case $input_text in
+        hello)      echo English    ;;
+        howdy)      echo American   ;;
+        你好)       echo Chinese    ;;
+        *)          echo "Unknown Language: $input_text"    ;;
+    esac
+done < test.txt
+```
+!!! tip inline end
+    这个例子用于从文件中读取信息并进行匹配。其中使用了`case`语句，它的用法类似于 C 中的`switch...case...`语句，后文我们会再介绍。
+
+假设有`test.txt`：
+```txt
+hello
+你好
+howdy
+hola
+```
+则：
+```bash
+./test.sh
+English
+Chinese
+American
+Unknown Language: hola
+```
+
+## 测试(`test`)与条件控制语句
