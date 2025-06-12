@@ -1,4 +1,4 @@
-# Shell Script
+# Shell Scripting
 
 >[The Shell Scripting Tutorial](https://www.shellscript.sh/)
 
@@ -163,6 +163,8 @@ hello, vg
     # Execute in current shell
     source ./test.sh  # or . ./test.sh
     ```
+
+
 
 ## 转义字符
 
@@ -359,4 +361,84 @@ American
 Unknown Language: hola
 ```
 
-## 测试(`test`)与条件控制语句
+## 测试(`test`) && 分支结构语句
+
+### `test`/`[]`与`if`
+
+在 shell 中，测试命令`test`/`[`用于评估表达式的值。在 `if`与`while` 的条件语句中最为常用。下面是 shell 中`if`的语法：
+
+!!! note inline end
+    `then`也可以与`if`语句放在不同的行中，放在同一行就必须像这样使用`;`分隔二者，以示二者不处于同一行；与其具有相反作用的操作符是`\`：
+    ```bash
+    [ "$FILE" -nt "/etc/passwd" ] && \
+        echo "$FILE is newer than /etc/passwd"
+    ```
+
+```sh
+if [ __condition__ ]; then
+    # .....
+elif [ __another_condition__ ]
+    # .....
+else
+    # .....
+fi
+```
+
+特别注意，`[`与`test`等效，通常都是 shell 的**内置命令**，因此其中需要评估的表达式`__condition__`是作为这个命令的**参数**传入，因此需要在`[`(`]`)与`__condition__`之间添加**空格**；
+
+同时，表达式`__condition__`中也需要适时添加空格，以示同一表达式的不同参数。下面简单举一个例子：
+
+!!! note inline end
+    在使用测试命令进行行字符串比较时，使用`=`进行比较（部分 shell 也接受`==`）；整数比较（ shell 默认不支持浮点数计算）则需要使用`-eq`，`-ne`等参数；
+
+    数值比较的参数就是符号描述的英文简写：如等于(equal)就是`-eq`、大于(greater than)就是`-gt`、小于等于(less or equal than)就是`-le`等；或也可使用现代 shell 的**算术扩展（`(())`）**进行表达式的计算评估，可直接使用C的算术操作符构造表达式，详情参考[Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html#Shell-Arithmetic)或[Unix & Linux StackExchange](https://unix.stackexchange.com/questions/306111/what-is-the-difference-between-the-bash-operators-vs-vs-vs)
+    
+有如下`if`语句：
+```sh
+if [$foo = "bar" ]
+```
+可以看出，`$foo`与`[`间没有括号。在 shell 眼里，这段命令就会被解释为`if test$foo = "bar" ]`，即一个没有闭合的测试语句。
+
+正确的写法应当是`if [ $foo = "bar" ]`。注意到`$foo`与`=`、`=`与`"bar"`等不同参数间也需要留有空格，这是由于需要测试命令将它们视作不同的参数以进行表达式计算，否则`test`命令会将它们视作一个整体（一个参数），无法进行表达式评估。
+
+>简单理解就是**命令与参数之间、参数与参数之间需要具有空格**
+
+!!! tip
+    现代 shell (bash, zsh, ksh, etc.)中，支持使用**扩展`test`命令（`[[]]`）**进行表达式评估计算；但需要注意`[[]]`的本质不是命令，而是一个**特殊语法结构**！
+    
+    关于`[[]]`的更多信息受篇幅限制这里不多作记录，可参考[The difference between `[]` and `[[]]` | reddit](https://www.reddit.com/r/bash/comments/1e1h41q/the_difference_between_and/)和[What is the difference between the Bash operators `[[` vs `[` vs `(` vs `((`? | Unix & Linux StackExchange](https://unix.stackexchange.com/questions/306111/what-is-the-difference-between-the-bash-operators-vs-vs-vs)。简单来说，`[[]]`更容易被正确使用。
+
+### `case`
+
+除`if...elif...else`外另一个分支结构语句，类似与C中的`switch...case...`。语法如下：
+```sh
+case __statement__ in
+    __pattern1__)
+                # operations_1...
+                ;;
+    __pattern2__)
+                # operations_2...
+                ;;
+    *)
+                # defualt operations...
+                ;;
+esac
+```
+其分支结构的可视化如下：
+```mermaid
+flowchart TD
+    A[start] --> B{case __statement__}
+    B -->|__pattern1__| C[operations_1]
+    B -->|__pattern2__| D[operations_2]
+    B -->|__*__| E[defualt operations]
+    
+    C --> G[;;]
+    D --> H[;;]
+    E --> I[;;]
+    
+    G --> J[esac]
+    H --> J 
+    I --> J 
+    
+    J --> K[end]
+```
