@@ -5,11 +5,6 @@ subtitle: Schedual For Short Term
 
 # TODO
 
-```mermaid
-
-```
-
-
 ## Academic
 
 - </> **C**omputer **S**cience Fundamental Learning Schedual
@@ -23,7 +18,7 @@ subtitle: Schedual For Short Term
 
         - [Multivariable Calculus | MIT 18.02SC](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/)
 
-- [*] DSA (Data Structure and Algorithms, 数据结构与算法)
+- [ ] DSA (Data Structure and Algorithms, 数据结构与算法)
     - [Hello 算法](https://www.hello-algo.com/)
 
     - [ ] CS61B: Data Structures and Algorithms
