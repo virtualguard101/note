@@ -5,6 +5,11 @@ subtitle: Schedual For Short Term
 
 # TODO
 
+```mermaid
+
+```
+
+
 ## Academic
 
 - </> **C**omputer **S**cience Fundamental Learning Schedual
@@ -20,15 +25,6 @@ subtitle: Schedual For Short Term
 
 - [*] DSA (Data Structure and Algorithms, 数据结构与算法)
     - [Hello 算法](https://www.hello-algo.com/)
-
-    - [*] CS106B/X: Programming Abstractions in C++
-        - [Stanford CS106B/X: Programming Abstractions in C++ | csdiy](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106B_CS106X/)
-
-        - [CS106B: Programming Abstractions | Latest](https://web.stanford.edu/class/cs106b/)
-
-        - [CS106X: Programming Abstractions in C++ | Autumn 2019](https://web.stanford.edu/class/cs106x/)
-
-        - [Resources Repository](https://github.com/virtualguard101/CS106B)
 
     - [ ] CS61B: Data Structures and Algorithms
         - [CS 61B Spring 2025](https://sp25.datastructur.es/)
@@ -59,6 +55,14 @@ subtitle: Schedual For Short Term
 
         - [CSAPP 重点解读](https://fengmuzi2003.gitbook.io/csapp3e)
 
+- [ ] Operating System
+
+- [ ] Parallel Computing && Distributed System
+
+- [ ] Computer Network
+
+- [ ] Database System
+
 
 ## Engineered
 
@@ -67,9 +71,12 @@ subtitle: Schedual For Short Term
 
     - [The art of command line](https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#the-art-of-command-line)
 
-- [ ] 云原生
-    - [BlogPage](https://blog.virtualguard101.xyz/2025/05/19/container-tech/)
+- [ ] Unity
+    - [Unity Essentials in-Editor: Install Unity 6](https://learn.unity.com/tutorial/66c39b3bedbc2a1990cb94c6?contentId=66c4ab6bedbc2a1f94eb0a93&missionId=66c4aac0edbc2a23228c872d&pathwayId=66c4af96edbc2a1604fdfba1&tab=overview)
 
+    - [Unity Learn](https://learn.unity.com/u/68172f02edbc2a162daa2c41/?tab=activity)
+
+- [ ] 云原生
     - [ ] Introduction to DevOps
         - [DevOps Tutorial | GeeksForGeeks](https://www.geeksforgeeks.org/devops-tutorial/)
 
@@ -88,23 +95,13 @@ subtitle: Schedual For Short Term
 
         - [入门 | Kubernetes文档](https://kubernetes.io/zh-cn/docs/setup/)
 
-- [ ] Unity
-    - [Unity Essentials in-Editor: Install Unity 6](https://learn.unity.com/tutorial/66c39b3bedbc2a1990cb94c6?contentId=66c4ab6bedbc2a1f94eb0a93&missionId=66c4aac0edbc2a23228c872d&pathwayId=66c4af96edbc2a1604fdfba1&tab=overview)
-
-    - [Unity Learn](https://learn.unity.com/u/68172f02edbc2a162daa2c41/?tab=activity)
-
-- [ ] C++ Qt Development
-    - [Getting Started with Qt](https://doc.qt.io/qt-6.8/gettingstarted.html)
-
-    - 中文文档：[Qt 入门](https://doc.qt.io/qt-6.8/zh/gettingstarted.html)
-
 
 ## Projects
-
-- [ ] DevOps 实践（游戏构建、部署、测试）
-    - [BlogPage](https://blog.virtualguard101.xyz/2025/06/05/devops-practice/)
 
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
     - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
 
     - [从零开始制作一个属于你自己的GPU | 基于FPGA的图形加速器实现原理](https://zhuanlan.zhihu.com/p/714400366?utm_psn=1883987006549374851)
+
+- [ ] DevOps 实践（游戏构建、部署、测试）
+    - [BlogPage](https://blog.virtualguard101.xyz/2025/06/05/devops-practice/)

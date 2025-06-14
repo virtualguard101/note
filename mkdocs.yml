@@ -99,6 +99,7 @@ hooks:
   - scripts/links.py
   - scripts/rss.py
   # - scripts/fancybox.py
+  # - scripts/obsidian.py
 
 extra:
   analytics:

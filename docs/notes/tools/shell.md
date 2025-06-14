@@ -164,6 +164,7 @@ hello, vg
     source ./test.sh  # or . ./test.sh
     ```
 
+### 特殊变量（预设变量）
 
 
 ## 转义字符
