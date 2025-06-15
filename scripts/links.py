@@ -10,6 +10,7 @@ from mkdocs.structure.nav import Link
 class LinkData:
     name: str
     url: str
+    description: str
     button_icon: str
     link_icon: str
 
@@ -17,6 +18,7 @@ LINKS = [
     LinkData(
         name='Homepage',
         url='https://virtualguard101.xyz',
+        description='',  # 添加描述
         button_icon='fontawesome/solid/house',
         link_icon='material/home',
     ),
@@ -25,6 +27,7 @@ LINKS = [
         # https://github.com/travellings-link/travellings/blob/master/docs/join.md
         name='Travelling',
         url='https://www.travellings.cn/go-by-clouds.html',
+        description='',  # 添加描述
         button_icon='fontawesome/solid/train-subway',
         link_icon='material/train',
     ),
@@ -44,8 +47,25 @@ def on_config(config: MkDocsConfig):
 
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     ''' 导航栏链接 '''
-    for l in LINKS:
-        link = Link(title=l.name, url=l.url)
-        link.meta = { 'icon': l.link_icon }
-        nav.items.append(link)
+    # for l in LINKS:
+    #     link = Link(title=l.name, url=l.url)
+    #     link.meta = { 'icon': l.link_icon }
+    #     nav.items.append(link)
+
+    # 在index后插入链接（索引1位置）
+    for i, link_data in enumerate(LINKS):
+
+        # 创建带描述的链接 - 使用HTML格式
+        # link_html = f'<span class="nav-link-title">{link_data.name}</span><span class="nav-link-description">{link_data.description}</span>'
+        # link = Link(title=link_html, url=link_data.url)
+
+        link = Link(title=link_data.name, url=link_data.url)
+        link.meta = { 'icon': link_data.link_icon }
+        # 计算插入位置（1 + i 确保顺序正确）
+        insert_position = 1 + i
+        # 防止索引越界
+        if insert_position > len(nav.items):
+            nav.items.append(link)
+        else:
+            nav.items.insert(insert_position, link)
     return nav

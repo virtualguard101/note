@@ -98,8 +98,8 @@ hooks:
   - scripts/copyright.py
   - scripts/links.py
   - scripts/rss.py
-  # - scripts/fancybox.py
-  # - scripts/obsidian.py
+  - scripts/fancybox.py
+  # - scripts/notes_links_dev.py
 
 extra:
   analytics:

@@ -1,8 +1,3 @@
----
-icon: material/pin
-subtitle: Schedual For Short Term
----
-
 # TODO
 
 ## Academic
@@ -61,7 +56,7 @@ subtitle: Schedual For Short Term
 
 ## Engineered
 
-- [*] Shell 脚本
+- [ ] Shell 脚本
     - [The Shell Scripting Tutorial](https://www.shellscript.sh/)
 
     - [The art of command line](https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#the-art-of-command-line)

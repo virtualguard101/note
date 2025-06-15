@@ -6,7 +6,7 @@ comments: true
 
 # About
 
-![power](./assets/index-power.jpg)
+![](./assets/index-power.jpg)
 
 === "English"
     **The only things researchers should abied by are debates and dialectics. Only by questioning everything at all times can one avoid falling into prejudice.**  
@@ -26,16 +26,6 @@ comments: true
 
 ## Recent Researching
 
-=== "English"
-
-    Refer to [TODO](https://note.virtualguard101.xyz/TODO/)
-
-=== "中文"
-
-    参见[TODO](https://note.virtualguard101.xyz/TODO/)
-
-
-## Archived Researching
 !!! note
     This part only records the courses which can be found at [csdiy](https://csdiy.wiki).
 
@@ -82,6 +72,6 @@ comments: true
     这是我的学习笔记，用于记录我的CS自学历程。欢迎在评论区留言。我的联系方式及其他站点参见[我的主页](https://virtualguard101.xyz/)
 
 
-![Hello](https://butterblock233.github.io/posts/images/Hello.gif)
+![](https://butterblock233.github.io/posts/images/Hello.gif)
 
 *GIF source: [Hello Apple by Meritt Thomas](https://dribbble.com/shots/17347386-Hello-Apple)*
