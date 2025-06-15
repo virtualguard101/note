@@ -1,6 +1,6 @@
 ---
 title: Engineering/Job/Misc
-icon: material/database-cog
+icon: material/tools
 date: 2025-04-13 09:07:13
 ---
 
@@ -9,9 +9,19 @@ date: 2025-04-13 09:07:13
 
 ## 学习参考
 
-### 云原生 && DevOps
+### MIT-missing-semester
 
-- [深入高可用系统原理与设计](https://www.thebyte.com.cn/)
+- [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
+
+### Linux
+
+- [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
+
+- [The Shell Scripting Tutorial](https://www.shellscript.sh/hints.html)
+
+<!-- ### [ ] 云原生 && DevOps -->
+
+<!-- - [深入高可用系统原理与设计](https://www.thebyte.com.cn/) -->
 
 ## 项目案例
 
