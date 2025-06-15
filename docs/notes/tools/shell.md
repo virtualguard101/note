@@ -566,4 +566,5 @@ echo "$HTML_FILES" | grep "/contents.html$"
 
 - **反引号**(`)执行命令并将结果存储到 ``HTML_FILES`` 变量中
 
-## 函数
+<!-- [ ] shell advanced: Function, Hints & Tips -->
+<!-- ## 函数 -->

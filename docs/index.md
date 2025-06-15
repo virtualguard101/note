@@ -1,5 +1,5 @@
 ---
-icon: material/information-outline
+icon: material/axis-arrow-info
 subtitle: DevOps Programmer & Undergraduate Student 
 comments: true
 ---

@@ -20,7 +20,7 @@ LINKS = [
         url='https://virtualguard101.xyz',
         description='',  # 添加描述
         button_icon='fontawesome/solid/house',
-        link_icon='material/home',
+        link_icon='fontawesome/solid/house',
     ),
     LinkData(
         name='Blog',
@@ -36,7 +36,7 @@ LINKS = [
         url='https://www.travellings.cn/go-by-clouds.html',
         description='',  # 添加描述
         button_icon='fontawesome/solid/train-subway',
-        link_icon='material/train',
+        link_icon='fontawesome/solid/train-subway',
     ),
 ]
 

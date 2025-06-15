@@ -2,7 +2,7 @@
 
 ## Academic
 
-- </> **C**omputer **S**cience Fundamental Learning Schedual
+- [x] Computer Science Fundamental Learning Schedual
     - [一个仅供参考的 CS 学习规划](https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/)
 
 - [ ] 数学
@@ -54,17 +54,15 @@
 - [ ] Database System
 
 
-## Engineered
-
-- [ ] Shell 脚本
-    - [The Shell Scripting Tutorial](https://www.shellscript.sh/)
-
-    - [The art of command line](https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file#the-art-of-command-line)
+## Advanced & Engineering
 
 - [ ] Unity
     - [Unity Essentials in-Editor: Install Unity 6](https://learn.unity.com/tutorial/66c39b3bedbc2a1990cb94c6?contentId=66c4ab6bedbc2a1f94eb0a93&missionId=66c4aac0edbc2a23228c872d&pathwayId=66c4af96edbc2a1604fdfba1&tab=overview)
 
     - [Unity Learn](https://learn.unity.com/u/68172f02edbc2a162daa2c41/?tab=activity)
+
+- [ ] Linux kernel principle
+    - [Linux Kernel Wiki | GitHub Repository](https://github.com/virtualguard101/linux_kernel_wiki)
 
 - [ ] 云原生
     - [ ] Introduction to DevOps
@@ -84,9 +82,6 @@
         - [Kubernetes 文档](https://kubernetes.io/zh-cn/docs/home/)
 
         - [入门 | Kubernetes文档](https://kubernetes.io/zh-cn/docs/setup/)
-
-- [ ] 正则表达式
-    - [RegexOne: Learn Regular Expressions with simple, interactive exercises](https://regexone.com/)
 
 
 ## Projects
