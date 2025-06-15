@@ -90,6 +90,9 @@ subtitle: Schedual For Short Term
 
         - [入门 | Kubernetes文档](https://kubernetes.io/zh-cn/docs/setup/)
 
+- [ ] 正则表达式
+    - [RegexOne: Learn Regular Expressions with simple, interactive exercises](https://regexone.com/)
+
 
 ## Projects
 

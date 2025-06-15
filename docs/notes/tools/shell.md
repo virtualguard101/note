@@ -166,10 +166,113 @@ hello, vg
 
 ### 特殊变量（预设变量）
 
+#### `$0...$9` && `$#` && `$@/$*`（参数管理）
+
+简单来说，`$n`用于**返回当前命令的第$n$个参数**；**`$#`用于返回当前命令后传入的参数数量**；**`$@`/`$*`用于返回当前命令后传入的所有参数**。下面看一个简单的例子，有以下脚本：
+```sh
+#!/bin/sh
+echo "This command which named $0 has called $# params just now"
+echo "The first param is $1"
+echo "The second one is $2"
+echo "All params are $@"
+```
+执行这个脚本，并添加参数，得到如下结果：
+```bash
+./var.sh
+This command which named ./var.sh has called 0 params just now
+The first param is
+The second one is
+All params are
+
+./var.sh "hello world"
+This command which named ./var.sh has called 1 params just now
+The first param is hello world
+The second one is
+All params are hello world
+
+./var.sh hello world
+This command which named ./var.sh has called 2 params just now
+The first param is hello
+The second one is world
+All params are hello world
+```
+
+!!! note "`$@` vs `$*`"
+    二者在参数不带引号时的效果是相同的，区别主要体现在参数被双引号包裹时：**前者会将每个参数保持为单独的实体，保留原始参数的完整性**；**后者会将所有参数合并为一个字符串，参数之间用第一个IFS(内部字段分隔符)字符分隔，默认是空格**。可参考[What is the difference between $@ and $* in shell scripts? | stackoverflow](https://stackoverflow.com/questions/2761723/what-is-the-difference-between-and-in-shell-scripts)
+
+另外，假设我们想要使一个命令（脚本）能够传入$9$个以上的参数，可以使用`shift`命令将位置参数左移$n$位（未添加参数默认**逐个**移动：
+```sh
+while [[ "$#" -gt "0" ]]
+do
+    echo "\$1 is $1"
+    shift #[n]
+done
+```
+执行`shift`后，`$#`（参数数量）会相应减少。
+
+#### `$?` && `$!` && `$$`（流程控制/错误检查）
+
+`$?`用于获取最近一次命令、函数或脚本的退出状态码（exit status），通常应用于**错误检查**与**流程控制**上。
+
+```sh
+/path/to/some/command
+
+if [[ "$?" -ne "0" ]]; then
+    echo "Failure with code $?!"
+else
+    echo "Success! Exit with $?"
+fi
+```
+正常情况下，执行这个脚本会返回如下信息：
+```bash
+./process.sh
+# some operations
+Success! Exit with 1
+```
+
+`$$`与`$!`用于指代进程编号
+
+`$$`用于指代当前命令或脚本（shell 进程）的[PID](https://zh.wikipedia.org/wiki/%E8%BF%9B%E7%A8%8BID)，常用于创建**临时文件**：
+```sh
+TEMP_FILE="/tmp/script.$$"
+touch $TEMP_FILE
+```
+
+`$!`则用于指代最近一个放入后台执行的命令的PID。
+
+#### `$IFS`
+
+`$IFS`（Internal Field Separator，内部字段分隔符）是 Shell 中用于确定单词边界的重要环境变量。实际应用中用于定义 shell 如何识别字段分隔符，在处理文本数据、解析输入和输出时扮演着关键角色。
+
+`$IFS`默认为一下三个值：
+
+- `SPACE`（空格）
+
+- `TAB`/`'\t'`（制表符）
+
+- `NEWLINE`/`'\n'`（换行符）
+
+通常情况下，我们只在脚本中**临时修改**`$IFS`的值：
+```sh
+#!/bin/bash
+
+# 原始 IFS 的备份
+OLD_IFS=$IFS
+
+# 将 IFS 设置为冒号，用于处理 /etc/passwd
+IFS=":"
+while read username password uid gid fullname homedir shell; do
+    echo "用户: $username, UID: $uid, 主目录: $homedir"
+done < /etc/passwd
+
+# 恢复原来的 IFS
+IFS=$OLD_IFS
+```
+
 
 ## 转义字符
 
-在 shell 中，部分字符具有特殊意义，如 `"` 被 shell 解释器用于定义字符串边界，会影响 shell 对文本参数的解释。
+在 shell 中，部分字符具有特殊意义，如 `"` 被 shell 解释器用于定义字符串边界，会影响 shell 对文本参数的解释；`$`会使得后面包含于特殊参数列表的参数被解释等。
 
 但在某些场景我们可能希望不希望这些字符被 shell 解释，而是直接在终端上输出它们；若尝试直接在命令或脚本中拼接它们，例如：
 ```bash
@@ -443,3 +546,24 @@ flowchart TD
     
     J --> K[end]
 ```
+
+## 反引号(`)
+
+使用反引号在 **shell 脚本中**抓取**外部命令**的返回信息：
+```sh
+HTML_FILES=`find / -name "*.html" -print`
+echo "$HTML_FILES" | grep "/index.html$"
+echo "$HTML_FILES" | grep "/contents.html$"
+```
+
+主要观察第一行命令：
+
+- 使用 `find` 命令从根目录 `/` 开始搜索 
+
+- `-name "*.html"` 匹配所有以 `.html` 结尾的文件
+
+- `-print` 输出找到的文件路径
+
+- **反引号**(`)执行命令并将结果存储到 ``HTML_FILES`` 变量中
+
+## 函数
