@@ -8,7 +8,7 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
-  # favicon: images/logo.png
+  favicon: https://note.virtualguard101.xyz/assets/logo.png
 
   font:
     text: "'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
