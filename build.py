@@ -3,6 +3,8 @@
 import os
 
 try:
+    os.system("uv run scripts/recent_notes.py")
+
     path, message = input("Commit path: "), input("Commit message: ")
 
     # git operation

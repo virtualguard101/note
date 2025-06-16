@@ -24,26 +24,21 @@ comments: true
     参见[我的博客](https://blog.virtualguard101.xyz/about/)
 
 
-## Recent Researching
-
-!!! note
-    This part only records the courses which can be found at [csdiy](https://csdiy.wiki).
+## Recent Notes 
 
 === "English"
 
-    - [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/): Standard C++ features and syntax.
-
-    - [CS61A](https://cs61a.org/): An introductory course on Object-Oriented Programming based on Python, emphasizes abstraction and goes deeper into the principles of program construction and operation. 
-
-    - [MIT-Missing-Semester](https://missing-semester-cn.github.io/): Fundamentals of modern computer engineering, essential for beginners in learning of **C**omputer **S**cience.
-
 === "中文"
 
-    - [CS106L | Stanford University](https://web.stanford.edu/class/cs106l/)：C++基础特性与应用
-
-    - [CS61A](https://cs61a.org/)：基于Python的面向对象程序设计入门课，强调抽象，内容深入到程序构造与运行原理
-
-    - [MIT-Missing-Semester](https://missing-semester-cn.github.io/)：现代计算机工程基础，CS入门必备课程
+<!-- recent_notes_start -->
+<ul>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/job/jd.md">部分JD</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Misc/Scientific Internet Access/proxy.md">透明代理</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/re.md">正则表达式</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/shell.md">Shell Scripting</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/linux/misc.md">Linux基础/杂项</a><span style="font-size:0.8em;">2025-06-08</span></div></li>
+</ul>
+<!-- recent_notes_end -->
 
 
 ## Learning Outcomes
