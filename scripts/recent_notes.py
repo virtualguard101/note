@@ -11,11 +11,11 @@ MAX_NOTES = 5
 DATE_FORMAT = '%Y-%m-%d'
 
 
-def get_title_relpath_date(md_file: Path):
-    """
-    提取第一个一级标题，返回标题、相对路径和修改日期
-    """
-    relpath = md_file.relative_to(INDEX_FILE.parent).as_posix()
+def get_title_relurl_date(md_file: Path):
+    ''' 提取标题、相对路径（去掉 .md 后缀）、修改日期 '''
+
+    relpath = md_file.relative_to(INDEX_FILE.parent)
+    relurl = relpath.with_suffix('').as_posix() + '/'  # MkDocs URL format
     title = None
     with md_file.open('r', encoding='utf-8') as f:
         for line in f:
@@ -25,7 +25,7 @@ def get_title_relpath_date(md_file: Path):
     title = title or md_file.stem
     mod_time = md_file.stat().st_mtime
     mod_date = datetime.fromtimestamp(mod_time).strftime(DATE_FORMAT)
-    return title, relpath, mod_date
+    return title, relurl, mod_date
 
 
 def main():
@@ -40,10 +40,10 @@ def main():
     # 生成 HTML 列表，标题和日期左右对齐，日期字体缩小
     items = []
     for md in recent:
-        title, rel, date = get_title_relpath_date(md)
+        title, url, date = get_title_relurl_date(md)
         items.append(
             f'<li><div style="display:flex; justify-content:space-between; align-items:center;">'
-            f'<a href="{rel}">{title}</a>'
+            f'<a href="{url}">{title}</a>'
             f'<span style="font-size:0.8em;">{date}</span>'
             '</div></li>'
         )
@@ -57,7 +57,7 @@ def main():
         return
     updated = before + START_MARKER + '\n' + new_section + '\n' + END_MARKER + after
     INDEX_FILE.write_text(updated, encoding='utf-8')
-    print(f"已更新 {INDEX_FILE}，插入了 {len(recent)} 条最近笔记链接。")
+    print(f"已更新 {INDEX_FILE}，插入了 {len(recent)} 条笔记链接。")
 
 if __name__ == '__main__':
     main()

@@ -32,11 +32,11 @@ comments: true
 
 <!-- recent_notes_start -->
 <ul>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/job/jd.md">部分JD</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Misc/Scientific Internet Access/proxy.md">透明代理</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/re.md">正则表达式</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/shell.md">Shell Scripting</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/linux/misc.md">Linux基础/杂项</a><span style="font-size:0.8em;">2025-06-08</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/job/jd/">部分JD</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Misc/Scientific Internet Access/proxy/">透明代理</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/re/">正则表达式</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/shell/">Shell Scripting</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/linux/misc/">Linux基础/杂项</a><span style="font-size:0.8em;">2025-06-08</span></div></li>
 </ul>
 <!-- recent_notes_end -->
 
