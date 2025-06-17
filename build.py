@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import subprocess
+# import subprocess
 
 # try:
 #     os.system("uv run scripts/recent_notes.py")
@@ -22,17 +22,30 @@ import subprocess
 import sys
 import os
 import logging
+import colorlog
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+# init color log
+handler = colorlog.StreamHandler()
+handler.setFormatter(colorlog.ColoredFormatter(
+    '%(log_color)s%(asctime)s - %(levelname)s - %(message)s',
+    log_colors={
+        'DEBUG':    'cyan',
+        'INFO':     'green',
+        'WARNING':  'yellow',
+        'ERROR':    'red',
+        'CRITICAL': 'bold_red',
+    }
+))
+
+logger = colorlog.getLogger(__name__)
+logger.setLevel(logging.INFO)
+logger.addHandler(handler)
 
 def main():
     try:
         # Update recent notes at index
         logger.info("Refresh recent notes at index page...")
-        result = subprocess.run(["uv", "run", "scripts/recent_notes.py"], 
-                               check=True)
+        result = subprocess.run(["uv", "run", "scripts/recent_notes.py"], check=True)
         logger.info("Refresh successfully!")
         
         # Get commit path & message
@@ -62,18 +75,15 @@ def main():
         return 1
         
     except subprocess.CalledProcessError as e:
-        logger.error(f"Proccess failed with {e.returncode}: {e.cmd}")
+        logger.error(f"Process failed with {e.returncode}: {e.cmd}")
         if e.stdout:
             logger.info(f"OUT: {e.stdout}")
         if e.stderr:
             logger.error(f"ERROR: {e.stderr}")
-            
-    # Other errors...
         if "git push" in str(e.cmd):
             logger.info("Git push error!")
         elif "git add" in str(e.cmd):
             logger.info("Git add error!")
-        
         return 2
         
     except ValueError as e:
@@ -81,7 +91,6 @@ def main():
         return 3
         
     except Exception as e:
-
         logger.exception(f"Other errors: {str(e)}")
         return 4
         
@@ -89,4 +98,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-
