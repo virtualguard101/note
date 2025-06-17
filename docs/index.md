@@ -60,11 +60,11 @@ comments: true
 
 === "English"
 
-    This is my notebook written in Chinese, use for recording my self learing process of **C**omputer **S**cience. You're welcome to leave a comment. Contact information and other sites(like blog) are available on my [HomePage](https://virtualguard101.xyz/).
+    This is my notebook written in Chinese, whose layout referred to [Stalo's Wiki](https://note.stalomeow.com/), use for recording my self learing process of **C**omputer **S**cience.  You're welcome to leave a comment. Contact information and other sites(like blog) are available on my [Homepage](https://virtualguard101.xyz/).
 
 === "中文"
 
-    这是我的学习笔记，用于记录我的CS自学历程。欢迎在评论区留言。我的联系方式及其他站点参见[我的主页](https://virtualguard101.xyz/)
+    这是我的学习笔记，排版参考了[Stalo's Wiki](https://note.stalomeow.com/)，用于记录我的CS自学历程。欢迎在评论区留言。我的联系方式及其他站点参见[我的主页](https://virtualguard101.xyz/)
 
 
 ![](https://butterblock233.github.io/posts/images/Hello.gif)
