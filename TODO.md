@@ -47,6 +47,15 @@
 
 - [ ] Operating System
 
+    - [ ] MIT 6.S081: Operating System Engineering
+        - [MIT 6.S081: Operating System Engineering | csdiy](https://csdiy.wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/MIT6.S081/)
+
+        - [6.S081: Operating System Engineering INDEX | MIT](https://pdos.csail.mit.edu/6.828/2021/schedule.html)
+
+        - [中文资料](https://xv6.dgs.zone/)
+
+        - [课程笔记](https://mit-public-courses-cn-translatio.gitbook.io/mit6-s081)
+
 - [ ] Parallel Computing && Distributed System
 
 - [ ] Computer Network
