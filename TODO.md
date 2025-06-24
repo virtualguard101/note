@@ -1,25 +1,28 @@
 # TODO
 
-## Academic
-
 - [x] Computer Science Fundamental Learning Schedual
     - [一个仅供参考的 CS 学习规划](https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/)
 
-- [ ] 数学
-    - [ ] 高等数学（多元微/积分学）
-        - [Single Variable Calculus | 18.01SC](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/)
+## Mathamatice
 
-        - [Multivariable calculus | Khan Academy](https://www.khanacademy.org/math/multivariable-calculus)
+- [ ] 高等数学（多元微/积分学）
+    - [Single Variable Calculus | 18.01SC](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/)
 
-        - [Multivariable Calculus | MIT 18.02SC](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/)
+    - [Multivariable calculus | Khan Academy](https://www.khanacademy.org/math/multivariable-calculus)
 
-- [ ] DSA (Data Structure and Algorithms, 数据结构与算法)
+    - [Multivariable Calculus | MIT 18.02SC](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/)
+
+## Computer Science Fundmental
+
+- [x] DSA (Data Structure and Algorithms, 数据结构与算法)
     - [Hello 算法](https://www.hello-algo.com/)
 
     - [ ] CS61B: Data Structures and Algorithms
         - [CS 61B Spring 2025](https://sp25.datastructur.es/)
 
         - [CS61B Textbook](https://cs61b-2.gitbook.io/cs61b-textbook)
+
+- [x] 
 
 - [ ] MIT 6.031: Software Construction
     - [6.102: Software Construction | MIT](https://web.mit.edu/6.102/www/sp25/)
