@@ -1,13 +1,13 @@
 # TODO
 
-- [x] [Review](https://github.com/virtualguard101/note/blob/main/TODO.md)
+- [ ] [Review](https://github.com/virtualguard101/note/blob/main/TODO.md)
 
-- [x] Computer Science Fundamental Learning Schedule
+- [ ] Computer Science Fundamental Learning Schedule
     - [一个仅供参考的 CS 学习规划](https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/)
 
 ## Mathematics
 
-- [x] 离散数学
+- [x] Discrete Mathematics
 
     - [Discrete Mathematics and Probability Theory | CS70](https://www.eecs70.org/)
 
@@ -79,7 +79,7 @@
 
 ## Advanced & Engineering
 
-- [x] Web 开发
+- [x] Web Development
     - [Web.lab | MIT](https://web.archive.org/web/20250412024231/https://weblab.mit.edu/schedule)
 
     - [MIT Web Development Crash Course | csdiy](https://csdiy.wiki/Web%E5%BC%80%E5%8F%91/mitweb/)
