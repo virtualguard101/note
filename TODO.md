@@ -1,9 +1,21 @@
 # TODO
 
-- [x] Computer Science Fundamental Learning Schedual
+- [x] [Review](https://github.com/virtualguard101/note/blob/main/TODO.md)
+
+- [x] Computer Science Fundamental Learning Schedule
     - [一个仅供参考的 CS 学习规划](https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/)
 
-## Mathamatice
+## Mathematice
+
+- [x] 离散数学
+
+    - [Discrete Mathematics and Probability Theory | CS70](https://www.eecs70.org/)
+
+    - [UCB CS70 : discrete Math and probability theory | csdiy](https://csdiy.wiki/%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/CS70/)
+
+- [ ] 线性代数
+
+    - [MIT18.06: Linear Algebra | csdiy](https://csdiy.wiki/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/MITLA/)
 
 - [ ] 高等数学（多元微/积分学）
     - [Single Variable Calculus | 18.01SC](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/)
@@ -22,12 +34,29 @@
 
         - [CS61B Textbook](https://cs61b-2.gitbook.io/cs61b-textbook)
 
-- [x] 
+- [x] Software Engineering
 
-- [ ] MIT 6.031: Software Construction
-    - [6.102: Software Construction | MIT](https://web.mit.edu/6.102/www/sp25/)
+    - [ ] MIT 6.031: Software Construction
+        - [6.102: Software Construction | MIT](https://web.mit.edu/6.102/www/sp25/)
 
-    - [Course Info | csdiy](https://csdiy.wiki/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/6031/)
+        - [Course Info | csdiy](https://csdiy.wiki/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/6031/)
+
+- [x] Operating System
+
+    - [ ] MIT 6.S081: Operating System Engineering
+        - [MIT 6.S081: Operating System Engineering | csdiy](https://csdiy.wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/MIT6.S081/)
+
+        - [6.S081: Operating System Engineering INDEX | MIT](https://pdos.csail.mit.edu/6.828/2021/schedule.html)
+
+        - [中文资料](https://xv6.dgs.zone/)
+
+        - [课程笔记](https://mit-public-courses-cn-translatio.gitbook.io/mit6-s081)
+
+- [ ] Parallel Computing && Distributed System
+
+- [ ] Computer Network
+
+- [ ] Database System
 
 - [ ] Computer Organization and Architecture
 
@@ -48,25 +77,16 @@
 
         - [CSAPP 重点解读](https://fengmuzi2003.gitbook.io/csapp3e)
 
-- [ ] Operating System
-
-    - [ ] MIT 6.S081: Operating System Engineering
-        - [MIT 6.S081: Operating System Engineering | csdiy](https://csdiy.wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/MIT6.S081/)
-
-        - [6.S081: Operating System Engineering INDEX | MIT](https://pdos.csail.mit.edu/6.828/2021/schedule.html)
-
-        - [中文资料](https://xv6.dgs.zone/)
-
-        - [课程笔记](https://mit-public-courses-cn-translatio.gitbook.io/mit6-s081)
-
-- [ ] Parallel Computing && Distributed System
-
-- [ ] Computer Network
-
-- [ ] Database System
-
-
 ## Advanced & Engineering
+
+- [x] Web 开发
+    - [Web.lab | MIT](https://web.archive.org/web/20250412024231/https://weblab.mit.edu/schedule)
+
+    - [MIT Web Development Crash Course | csdiy](https://csdiy.wiki/Web%E5%BC%80%E5%8F%91/mitweb/)
+
+    - [Base images](https://docs.docker.com/build/building/base-images/)
+
+    - [How to Build Docker Image : Comprehensive Beginners Guide](https://devopscube.com/build-docker-image/)
 
 - [ ] Unity
     - [Unity Essentials in-Editor: Install Unity 6](https://learn.unity.com/tutorial/66c39b3bedbc2a1990cb94c6?contentId=66c4ab6bedbc2a1f94eb0a93&missionId=66c4aac0edbc2a23228c872d&pathwayId=66c4af96edbc2a1604fdfba1&tab=overview)
@@ -82,8 +102,8 @@
 
         - [深入高可用系统原理与设计](https://www.thebyte.com.cn/)
 
-        - [DevOpsBook | Github Repository](https://github.com/virtualguard101/DevOpsBook)
-        (*前者SSL证书失效，暂用本地部署阅读替代*)
+        <!-- - [DevOpsBook | Github Repository](https://github.com/virtualguard101/DevOpsBook)
+        (*前者SSL证书失效，暂用本地部署阅读替代*) -->
 
     - [ ] Docker
         - [dockerdocs](https://docs.docker.com/)

@@ -32,7 +32,7 @@ comments: true
 
 <!-- recent_notes_start -->
 <ul>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Job & Schedule/schedual/">一段与AI的聊天记录</a><span style="font-size:0.8em;">2025-06-24</span></div></li>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Job & Schedule/schedule/">一段与AI的聊天记录</a><span style="font-size:0.8em;">2025-06-25</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Job & Schedule/jd/">部分JD</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Misc/Scientific Internet Access/proxy/">透明代理</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/re/">正则表达式</a><span style="font-size:0.8em;">2025-06-15</span></div></li>

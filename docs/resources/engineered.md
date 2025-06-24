@@ -23,6 +23,15 @@ date: 2025-04-13 09:07:13
 
 <!-- - [深入高可用系统原理与设计](https://www.thebyte.com.cn/) -->
 
+## 社区收藏
+
+!!! tip inline end
+    根据领域进行分类
+
+### DevOps
+
+- [DevopsCube: Become a Better DevOps Engineer](https://devopscube.com/)
+
 ## 项目案例
 
 ### C++项目
