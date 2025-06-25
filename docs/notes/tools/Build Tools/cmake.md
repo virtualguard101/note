@@ -107,7 +107,7 @@ rm -rf *
 
 ### 配合`vcpkg`进行构建
 
-基础配置参考[vcpkg | virtualguard's note](https://note.virtualguard101.xyz/notes/tools/vcpkg/)
+基础配置参考[vcpkg | virtualguard's note](https://note.virtualguard101.com/notes/tools/vcpkg/)
 
 假设需要依赖`glfw3`，`CMakeLists.txt`如下
 

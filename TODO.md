@@ -130,6 +130,6 @@
     - [Base images | Docker](https://docs.docker.com/build/building/base-images/)
 
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
-    - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
+    - [项目日志](https://projects.virtualguard101.com/posts/gpu-researching-log/)
 
     - [从零开始制作一个属于你自己的GPU | 基于FPGA的图形加速器实现原理](https://zhuanlan.zhihu.com/p/714400366?utm_psn=1883987006549374851)

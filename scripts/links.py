@@ -17,14 +17,14 @@ class LinkData:
 LINKS = [
     LinkData(
         name='Homepage',
-        url='https://virtualguard101.xyz',
+        url='https://virtualguard101.com',
         description='',  # 添加描述
         button_icon='fontawesome/solid/house',
         link_icon='fontawesome/solid/house',
     ),
     LinkData(
         name='Blog',
-        url='https://blog.virtualguard101.xyz',
+        url='https://blog.virtualguard101.com',
         description='',  # 添加描述
         button_icon='fontawesome/solid/blog',
         link_icon='fontawesome/solid/blog',

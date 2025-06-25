@@ -1,5 +1,5 @@
 site_name: virtualguard's Note
-site_url: https://note.virtualguard101.xyz
+site_url: https://note.virtualguard101.com
 repo_url: https://github.com/virtualguard101/note
 repo_name: virtualguard101/note
 edit_uri: blob/main/docs/
@@ -8,7 +8,7 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
-  # favicon: https://note.virtualguard101.xyz/assets/logo.png
+  # favicon: https://note.virtualguard101.com/assets/logo.png
   favicon: https://note.virtualguard101.com/assets/logo1.jpg
 
   font:

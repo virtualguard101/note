@@ -18,10 +18,10 @@ comments: true
 ## About Me
 
 === "English"
-    Get more information in my [Blog Site](https://blog.virtualguard101.xyz/about/)
+    Get more information in my [Blog Site](https://blog.virtualguard101.com/about/)
 
 === "中文"
-    参见[我的博客](https://blog.virtualguard101.xyz/about/)
+    参见[我的博客](https://blog.virtualguard101.com/about/)
 
 
 ## Recent Notes 
@@ -32,11 +32,11 @@ comments: true
 
 <!-- recent_notes_start -->
 <ul>
+<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/Build Tools/cmake/">CMake</a><span style="font-size:0.8em;">2025-06-25</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Job & Schedule/schedule/">一段与AI的聊天记录</a><span style="font-size:0.8em;">2025-06-25</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Job & Schedule/jd/">部分JD</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/Misc/Scientific Internet Access/proxy/">透明代理</a><span style="font-size:0.8em;">2025-06-17</span></div></li>
 <li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/re/">正则表达式</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
-<li><div style="display:flex; justify-content:space-between; align-items:center;"><a href="notes/tools/shell/">Shell Scripting</a><span style="font-size:0.8em;">2025-06-15</span></div></li>
 </ul>
 <!-- recent_notes_end -->
 
@@ -60,11 +60,11 @@ comments: true
 
 === "English"
 
-    This is my notebook written in Chinese, whose layout referred to [Stalo's Wiki](https://note.stalomeow.com/), use for recording my self learing process of **C**omputer **S**cience.  You're welcome to leave a comment. Contact information and other sites(like blog) are available on my [Homepage](https://virtualguard101.xyz/).
+    This is my notebook written in Chinese, whose layout referred to [Stalo's Wiki](https://note.stalomeow.com/), use for recording my self learing process of **C**omputer **S**cience.  You're welcome to leave a comment. Contact information and other sites(like blog) are available on my [Homepage](https://virtualguard101.com/).
 
 === "中文"
 
-    这是我的学习笔记，排版参考了[Stalo's Wiki](https://note.stalomeow.com/)，用于记录我的CS自学历程。欢迎在评论区留言。我的联系方式及其他站点参见[我的主页](https://virtualguard101.xyz/)
+    这是我的学习笔记，排版参考了[Stalo's Wiki](https://note.stalomeow.com/)，用于记录我的CS自学历程。欢迎在评论区留言。我的联系方式及其他站点参见[我的主页](https://virtualguard101.com/)
 
 
 ![](https://butterblock233.github.io/posts/images/Hello.gif)
