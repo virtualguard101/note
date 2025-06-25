@@ -17,7 +17,7 @@ theme:
 
   icon:
     repo: fontawesome/brands/github
-    logo: octicons/stack-24
+    logo: material/notebook
     edit: material/pencil
     # tag:
       # default: fontawesome/solid/hashtag
