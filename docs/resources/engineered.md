@@ -9,10 +9,6 @@ date: 2025-04-13 09:07:13
 
 ## 学习参考
 
-### MIT-missing-semester
-
-- [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
-
 ### Linux
 
 - [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
@@ -22,6 +18,13 @@ date: 2025-04-13 09:07:13
 <!-- ### [ ] 云原生 && DevOps -->
 
 <!-- - [深入高可用系统原理与设计](https://www.thebyte.com.cn/) -->
+
+### 杂项
+
+- [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
+
+<!-- [ ] 正则表达式 -->
+<!-- - [RegexOne: Learn Regular Expressions with simple, interactive exercises | 正则表达式](https://regexone.com/) -->
 
 ## 社区收藏
 

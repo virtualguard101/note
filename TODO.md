@@ -24,6 +24,7 @@
 
     - [Multivariable Calculus | MIT 18.02SC](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/)
 
+
 ## Computer Science Fundmental
 
 - [x] DSA (Data Structure and Algorithms, 数据结构与算法)
@@ -77,6 +78,7 @@
 
         - [CSAPP 重点解读](https://fengmuzi2003.gitbook.io/csapp3e)
 
+
 ## Advanced & Engineering
 
 - [x] Web Development
@@ -118,10 +120,16 @@
 
 ## Projects
 
+- [x] web开发简要实践：个人站点完善及美化
+    - [BlogPage](https://blog.virtualguard101.com/2025/06/23/web/)
+
+    - [How to Build Docker Image: Comprehensive Beginners Guide](https://devopscube.com/build-docker-image/)
+
+    - [Devcontainer: Developing inside a Container | Visual Studio Code](https://code.visualstudio.com/docs/devcontainers/containers)
+
+    - [Base images | Docker](https://docs.docker.com/build/building/base-images/)
+
 - [ ] FPGA-GPU：实现一个寄存器传输级（RTL）的图形加速器
     - [项目日志](https://projects.virtualguard101.xyz/posts/gpu-researching-log/)
 
     - [从零开始制作一个属于你自己的GPU | 基于FPGA的图形加速器实现原理](https://zhuanlan.zhihu.com/p/714400366?utm_psn=1883987006549374851)
-
-- [ ] DevOps 实践（游戏构建、部署、测试）
-    - [BlogPage](https://blog.virtualguard101.xyz/2025/06/05/devops-practice/)
