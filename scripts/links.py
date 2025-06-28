@@ -23,6 +23,13 @@ LINKS = [
         link_icon='fontawesome/solid/house',
     ),
     LinkData(
+        name='Wiki',
+        url='https://wiki.virtualguard101.com',
+        description='',  # 添加描述
+        button_icon='fontawesome/brands/stack-overflow',
+        link_icon='fontawesome/brands/stack-overflow',
+    ),
+    LinkData(
         name='Blog',
         url='https://blog.virtualguard101.com',
         description='',  # 添加描述
