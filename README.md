@@ -2,6 +2,10 @@
 
 Personal notebook written in Chinese, use for recording my self learing process of **C**omputer **S**cience.
 
+>[!important]
+>
+>This site will be abandoned to maintain since July 5th, 2025. All of the documentations will be moved into the Notebook section of [virtualguard101's Wiki](https://wiki.virtualguard101.com/).
+
 ## Read Locally
 
 Use [MkDocs](https://github.com/mkdocs/mkdocs) & [Material](https://github.com/squidfunk/mkdocs-material) to construct in localhost.
